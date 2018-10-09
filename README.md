@@ -33,7 +33,7 @@ Run `npm run build` to build the project. The build artifacts will be stored in 
 
 ## Author
 
-The author of this software is Michael Czechowski, web developer based in Stuttgart and Berlin, Germany. Only with the support of (Sarah Esser)[//sarahesser.de], artist and sculptress based in Berlin, this project could be realized. We are proud to call our software free and open.
+The author of this software is Michael Czechowski, web developer based in Stuttgart and Berlin, Germany. Only with the support of [Sarah Esser](//sarahesser.de), artist and sculptress based in Berlin, this project could be realized. We are proud to call our software free and open.
 
 ## Contributors
 
