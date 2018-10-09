@@ -3,7 +3,9 @@
   <small>Document based Content Management System with <a href="//github.com/angular/angular" target="_blank">Angular 6</a></small>
 </div>
 
-> This project is under heavy development. Please, use with caution.
+```
+WIP (Work in Progress): This project is under heavy development. Please, use with caution.
+```
 
 ## Rquirements
 
