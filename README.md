@@ -1,9 +1,9 @@
 <div align="center">
   <h1>Donatello</h1>  
   <small>Document based Content Management System with <a href="//github.com/angular/angular" target="_blank">Angular 6</a></small>
-  <i>This project is under heavy development. Please, use with caution.</i>
 </div>
 
+> This project is under heavy development. Please, use with caution.
 
 ## Rquirements
 
