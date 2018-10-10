@@ -37,11 +37,11 @@ The author of this software is [Michael Czechowski](//dailysh.it), web developer
 
 ## Contributors
 
-- Michael Czechowski (<mail@dailysh.it>)
+- Michał Czechowski (<mail@dailysh.it>)
 
 ## License
 
-Copyright (C) 2018 Michael Czechowski
+Copyright (C) 2018 Michał Czechowski
 
 This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; version 2.
 
