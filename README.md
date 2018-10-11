@@ -9,27 +9,52 @@
 
 <br>
 
-## Rquirements
+## Getting Started
+
+### Rquirements
 
 - [Install **Node.js** via package manager](//nodejs.org/en/download/package-manager/)
 - [Install **Angular CLI** via npm](//angular.io/guide/quickstart)
 
-## NPM Scripts
+### Usefull Scripts
 
 | command          | description                                                     |
 |------------------|-----------------------------------------------------------------|
 | `npm run start`  | start development server on `http://localhost:4200/`            |
 | `npm run build`  | build production application and save to `./dist`               |
 
-## Development server
+### Development server
 
 Download dependencies with `npm i` or `yarn`.
 
 Run `npm run start` for a dev server. Browser opens and navigates automatically to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Build
+### Build for Distribution
 
 Run `npm run build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+
+### Recommended git hooks (optional)
+
+Create inside `.git/hooks/` a new hook `post-merge`.
+
+```bash
+#!/bin/bash
+#
+# Install node package modules
+npm i
+# Build project
+npm run build
+```
+
+Git hooks have to be executables, so change the permissions to.
+
+```bash
+chmod a+x ~/.git/hooks/post-merge
+```
+
+## Meta Information
+
+*Informations about the motivation, authors and license*
 
 ## Author
 
