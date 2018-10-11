@@ -11,7 +11,7 @@ WIP (Work in Progress): This project is under heavy development. Please, use wit
 
 ## Rquirements
 
-- Node.js
+- [Install **Node.js** via package manager](//nodejs.org/en/download/package-manager/)
 - Angular CLI
 
 ## NPM Scripts
