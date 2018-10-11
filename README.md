@@ -39,7 +39,6 @@ Create inside `.git/hooks/` a new hook `post-merge`.
 
 ```bash
 #!/bin/bash
-#
 # Install node package modules
 npm i
 # Build project
