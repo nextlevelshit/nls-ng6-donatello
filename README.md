@@ -5,7 +5,7 @@
 
 <br>
 
-*WIP (Work in Progress): This project is under heavy development. Please, use with caution.*
+*WIP (Work in Progress): This project is under heavy development. Please, use with caution. It is planned to develope a modular static page generator for developer novices to maintain there own website. It is recommended to use it together with [nls-lumen-webhook](//github.com/nextlevelshit/nls-lumen-webhook) for automated deployments.*
 
 <br>
 
