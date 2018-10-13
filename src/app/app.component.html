@@ -1,5 +1,31 @@
-<h1>I hate myself!</h1>
+<header>
+  <nav>
+    <ul class="link-list">
+      <li>
+        <a routerLink="/">Work</a>
+      </li>
+      <li>
+        <a routerLink="/page/vita">Vita</a>
+      </li>
+      <li>
+        <a routerLink="/page/news">News</a>
+      </li>
+    </ul>
+  </nav>
+</header>
 
-<p>Really</p>
+<main>
+  <router-outlet></router-outlet>
+  <router-outlet name="details"></router-outlet>
+</main>
 
-<router-outlet></router-outlet>
+<footer>
+  <ul class="link-list">
+    <li>
+      <a routerLink="/page/imprint">Imprint</a>
+    </li>
+    <li>
+      <a routerLink="/page/disclaimer">Disclaimer</a>
+    </li>
+  </ul>
+</footer>
