@@ -15,8 +15,20 @@
 </header>
 
 <main>
-  <router-outlet></router-outlet>
-  <router-outlet name="details"></router-outlet>
+  <section>
+    <nav>
+      <ul class="link-list">
+        <li><a href="#">#</a></li>
+        <li><a href="#">#</a></li>
+      </ul>
+    </nav>
+  </section>
+  <section>
+    <router-outlet></router-outlet>
+  </section>
+  <section>
+    <router-outlet name="details"></router-outlet>
+  </section>
 </main>
 
 <footer>
