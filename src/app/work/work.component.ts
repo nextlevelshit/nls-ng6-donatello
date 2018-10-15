@@ -20,8 +20,6 @@ export class WorkComponent implements OnDestroy {
     private metaService: MetaService,
     private workService: WorkService
   ) {
-    console.log('constructing work component');
-
     this.workService.listAll().subscribe(res => {
       this.updateWork(res);
       this.updateMeta();

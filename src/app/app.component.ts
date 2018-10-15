@@ -9,7 +9,7 @@ import { MetaService } from './meta/meta.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements AfterContentChecked, OnDestroy, OnInit {
+export class AppComponent implements AfterContentChecked, OnDestroy {
   public meta: Meta;
 
   constructor (
@@ -17,20 +17,13 @@ export class AppComponent implements AfterContentChecked, OnDestroy, OnInit {
   ) {
   }
 
-  ngOnInit() {
-    console.log('initing app component');
-  }
-
   ngAfterContentChecked() {
-    console.log('aftering content app component');
-
     this.metaService.retrieve().subscribe((res) => {
       this.meta = res;
     });
   }
 
   ngOnDestroy() {
-    console.log('destroying app component');
-    // this.metaService.retrieve().unsubscribe();
+    this.meta = null;
   }
 }
