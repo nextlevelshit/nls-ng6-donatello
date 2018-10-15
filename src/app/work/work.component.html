@@ -1,8 +1,27 @@
-<article>
+<header>
+  <h1>Work</h1>
+  <p>Unbelievable, but that is my shit!</p>
+</header>
+
+<article *ngFor="let category of work">
   <header>
-    <h1>Work</h1>
+    <h2>{{category.title}}</h2>
   </header>
-  <p>
-    <a [routerLink]="[ {outlets: { details: 'work/gaehnschreier' } } ]">Details</a>
-  </p>
+  <ul>
+    <li *ngFor="let item of category.items">
+      <a routerLink="[{outlets: {details: 'details'}}]">
+        <figure>
+          <img *ngIf="item.src" [src]="item.src" [alt]="item.description">
+          <figcaption>
+            {{item.title}}
+          </figcaption>
+        </figure>
+      </a>
+      <ul class="list" *ngIf="item.information">
+        <li *ngFor="let information of item.information">
+          {{information}}
+        </li>
+      </ul>
+    </li>
+  </ul>
 </article>

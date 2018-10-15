@@ -16,10 +16,12 @@
 
 <main>
   <section>
-    <nav>
+    Subnavigation
+    <nav *ngIf="page.headlines">
       <ul class="link-list">
-        <li><a href="#">#</a></li>
-        <li><a href="#">#</a></li>
+        <li *ngFor="let headline of page.headlines">
+          <a [href]="'#' + headline.slug">{{headline.plain}}</a>
+        </li>
       </ul>
     </nav>
   </section>
