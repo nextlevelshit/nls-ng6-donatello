@@ -14,11 +14,11 @@ export class WorkService {
     this.work = [
       {
         title: 'Sculptures',
-        fullPath: '_content/work/sculpture',
+        fullPath: 'work/sculpture',
         items: [
           {
             title: 'Gähnschreier',
-            fullPath: '_content/work/sculpture/WV-2016-010',
+            fullPath: 'work/sculpture/WV-2016-010',
             information: [
               '200 x 300 cm',
               '2015',
@@ -26,7 +26,7 @@ export class WorkService {
             ],
             pictures: [
               {
-                fullPath:  '_content/work/sculpture/WV-2016-010/WV-2016-010-1.JPG'
+                fullPath:  'work/sculpture/WV-2016-010/WV-2016-010-1.JPG'
               }
             ]
           }
@@ -34,11 +34,11 @@ export class WorkService {
       },
       {
         title: 'Drawings',
-        fullPath: '_content/work/drawing/',
+        fullPath: 'work/drawing/',
         items: [
           {
             title: 'Nacker Mann',
-            fullPath: '_content/work/drawing/Z-WV-2018-001',
+            fullPath: 'work/drawing/Z-WV-2018-001',
             information: [
               '100 x 200 cm',
               '2018',

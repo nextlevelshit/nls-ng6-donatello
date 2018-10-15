@@ -9,7 +9,7 @@
   </header>
   <ul>
     <li *ngFor="let item of category.items">
-      <a routerLink="[{outlets: {details: 'details'}}]">
+      <a [routerLink]="[{outlets: {details: item.fullPath}}]">
         <figure>
           <img *ngIf="item.src" [src]="item.src" [alt]="item.description">
           <figcaption>

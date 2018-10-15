@@ -11,7 +11,7 @@ const routes: Routes = [
     component: WorkComponent
   },
   {
-    path: 'work/:slug',
+    path: 'work/:category/:item',
     component: DetailsComponent,
     outlet: 'details'
   },
