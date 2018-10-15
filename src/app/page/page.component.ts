@@ -10,20 +10,36 @@ import { map, catchError } from 'rxjs/operators';
 })
 export class PageComponent {
   protected params: any;
+  protected content: any;
 
   constructor(
     private route: ActivatedRoute
   ) {
     route.url.subscribe((u) => {
-      this.params = route.snapshot.params;
+      this.content = this.markdown(route.snapshot.params.slug);
     });
-    // this.params = this.route.params.pipe(
-      // map((res) => {
-        // return res.data;
-        // console.log(res.data);
-      // }),
-      // catchError(error => of(null))
-    // );
+  }
+
+  protected markdown(slug: String) {
+    return `
+      # Yeah, ${slug} works
+
+      This is my first example of using *markdown*:
+
+      - Listing
+      - is
+      - quiet simple
+
+      1. Ordered
+      2. lists
+         1. Are
+         2. also
+         3. possible
+
+      > Quoting works as well
+
+      But whats about [links to work](/work)
+    `;
   }
 
 }
