@@ -1,4 +1,4 @@
-export class File {
+export interface FileElement {
   id?: string;
   isFolder: boolean;
   name: string;

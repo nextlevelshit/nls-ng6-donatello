@@ -17,13 +17,15 @@
 <main>
   <section>
     Subnavigation
-    <nav *ngIf="page.headlines">
-      <ul class="link-list">
-        <li *ngFor="let headline of page.headlines">
+    <pre>{{meta|json}}</pre>
+
+    <!-- <nav *ngIf="meta">
+      <ul *ngIf="meta.headlines" class="link-list">
+        <li *ngFor="let headline of meta.headlines">
           <a [href]="'#' + headline.slug">{{headline.plain}}</a>
         </li>
       </ul>
-    </nav>
+    </nav> -->
   </section>
   <section>
     <router-outlet></router-outlet>

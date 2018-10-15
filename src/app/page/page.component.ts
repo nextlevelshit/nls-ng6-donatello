@@ -1,7 +1,8 @@
 import { ActivatedRoute } from '@angular/router';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { map, catchError } from 'rxjs/operators';
+
+import { MetaService } from './../meta/meta.service';
 
 @Component({
   selector: 'nls-page',
@@ -11,18 +12,26 @@ import { map, catchError } from 'rxjs/operators';
 export class PageComponent {
   protected params: any;
   protected content: any;
+  protected slug: String;
 
   constructor(
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private metaService: MetaService
   ) {
     route.url.subscribe((u) => {
-      this.content = this.markdown(route.snapshot.params.slug);
+      this.slug = route.snapshot.params.slug;
+      this.content = this.markdown();
+      this.metaService.update({
+        title: `${this.slug} title`,
+        description: `${this.slug} description`,
+        headlines: []
+      });
     });
   }
 
-  protected markdown(slug: String) {
+  protected markdown() {
     return `
-      # Yeah, ${slug} works
+      # Yeah, ${this.slug} works
 
       This is my first example of using *markdown*:
 
@@ -41,5 +50,4 @@ export class PageComponent {
       But whats about [links to work](/work)
     `;
   }
-
 }

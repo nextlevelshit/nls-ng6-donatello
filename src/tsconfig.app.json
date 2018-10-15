@@ -10,7 +10,8 @@
     "experimentalDecorators": true,
     "baseUrl": "./",
     "paths": {
-      "@app/*": [ "./src/app/*" ]
+      "@app/*": [ "app/*" ],
+      "@model/*": [ "app/model/model/*" ]
     }
   },
   "exclude": [
