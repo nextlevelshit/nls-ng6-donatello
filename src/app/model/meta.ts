@@ -1,11 +1,12 @@
 export interface Meta {
-  title: String;
-  description?: String;
-  headlines?: Array<Headline>;
+  title: string;
+  keywords?: string[];
+  description?: string;
+  headlines?: Headline[];
 }
 
 export interface Headline {
-  slug: String;
-  plain: String;
-  children?: Array<Headline>;
+  slug: string;
+  plain: string;
+  children?: Headline[];
 }

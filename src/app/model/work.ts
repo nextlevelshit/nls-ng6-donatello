@@ -1,20 +1,20 @@
 export interface Work {
-  title: String;
-  fullPath?: String; // e.g. work/drawing/
-  relativePath?: String;
+  title: string;
+  fullPath?: string; // e.g. work/drawing/
+  relativePath?: string;
   items?: WorkItem[];
 }
 
 export interface WorkItem {
-  title: String;
-  fullPath: String;
-  relativePath?: String;
-  information?: String[];
+  title: string;
+  fullPath: string;
+  relativePath?: string;
+  information?: string[];
   pictures?: WorkPicture[];
 }
 
 export interface WorkPicture {
-  fullPath: String;
-  relativePath?: String;
-  alt?: String;
+  fullPath: string;
+  relativePath?: string;
+  alt?: string;
 }
