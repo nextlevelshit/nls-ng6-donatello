@@ -1,0 +1,54 @@
+@import "../styles-variables";
+
+$this-navbar-brand-line-height: .9;
+$this-footer-height: 4rem;
+
+.navbar {
+
+  &-brand {
+    margin: 0;
+    line-height: $this-navbar-brand-line-height;
+    text-transform: uppercase;
+    font-family: $headings-font-family;
+    font-weight: $headings-font-weight;
+
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: none;
+      color: $link-hover-color;
+    }
+  }
+
+  &-nav {
+    margin: 0;
+
+    .nav-item {
+      padding-right: $spacer * 3;
+    }
+
+    .nav-link {
+      text-transform: uppercase;
+
+      &:hover,
+      &:focus,
+      &:active {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+body {
+  padding-top: $this-navbar-brand-line-height * $navbar-brand-font-size * 2 + $navbar-padding-y * 2;
+  margin-bottom: $this-footer-height;
+}
+
+.footer {
+  // position: absolute;
+  // bottom: 0;
+  // width: 100%;
+  height: $this-footer-height;
+  line-height: $this-footer-height;
+  background-color: $gray-100;
+}

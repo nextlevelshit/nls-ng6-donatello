@@ -1,47 +1,61 @@
 <header>
-  <nav>
-    <ul class="link-list">
-      <li>
-        <a routerLink="/">Work</a>
-      </li>
-      <li>
-        <a routerLink="/page/vita">Vita</a>
-      </li>
-      <li>
-        <a routerLink="/page/news">News</a>
-      </li>
-    </ul>
+  <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main" aria-controls="main" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse row flex-xl-nowrap align-items-center" id="main">
+      <a class="navbar-brand col-12 col-md-3 col-xl-2" routerLink="/">Sarah<br>Esser</a>
+      <div class="col-12 col-md-9 col-xl-10">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/">Work</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/page/vita">Vita</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/page/news">News</a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </nav>
 </header>
 
-<main>
-  <section>
-    Subnavigation
-    <pre>{{headlines|json}}</pre>
+<main class="container-fluid">
+  <div class="row flex-xl-nowrap">
+    <section class="col-12 col-md-3 col-xl-2 bd-sidebar">
+      Subnavigation
+      <pre>{{headlines|json}}</pre>
 
-    <!-- <nav *ngIf="headlines">
-      <ul *ngIf="headlines" class="link-list">
-        <li *ngFor="let headline of headlines">
-          <a [href]="'#' + headline.slug">{{headline.plain}}</a>
-        </li>
-      </ul>
-    </nav> -->
-  </section>
-  <section>
-    <router-outlet></router-outlet>
-  </section>
-  <section>
-    <router-outlet name="details"></router-outlet>
-  </section>
+      <!-- <nav *ngIf="headlines">
+        <ul *ngIf="headlines" class="link-list">
+          <li *ngFor="let headline of headlines">
+            <a [href]="'#' + headline.slug">{{headline.plain}}</a>
+          </li>
+        </ul>
+      </nav> -->
+    </section>
+    <section class="col-12 col-md-9 col-xl-10">
+      <router-outlet></router-outlet>
+    </section>
+  </div>
 </main>
 
-<footer>
-  <ul class="link-list">
-    <li>
-      <a routerLink="/page/imprint">Imprint</a>
-    </li>
-    <li>
-      <a routerLink="/page/disclaimer">Disclaimer</a>
-    </li>
-  </ul>
+<section>
+  <router-outlet name="details"></router-outlet>
+</section>
+
+<footer class="footer">
+  <div class="container-fluid">
+    <ul class="list-inline">
+      <li class="list-inline-item">
+        <a routerLink="/page/imprint">Imprint</a>
+      </li>
+      <li class="list-inline-item">
+        <a routerLink="/page/disclaimer">Disclaimer</a>
+      </li>
+    </ul>
+  </div>
 </footer>

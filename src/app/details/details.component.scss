@@ -1,4 +1,7 @@
+@import "../../styles-variables";
+
 .nls-details {
+  z-index: $zindex-modal;
   position: fixed;
   top: 0;
   left: 0;
@@ -6,5 +9,5 @@
   width: 100vw;
   overflow: hidden;
 
-  background: #fff;
+  background: $white;
 }

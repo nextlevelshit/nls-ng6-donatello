@@ -15,6 +15,7 @@ export class MetaService {
   public retrieve(): Observable<Meta> {
     return new Observable(observer => {
       observer.next(this.meta);
+      observer.complete();
     });
   }
 

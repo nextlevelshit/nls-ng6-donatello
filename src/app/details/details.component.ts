@@ -1,7 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
 
-
 const OVERLAY_CLASS = 'nls-overlay';
 
 @Component({

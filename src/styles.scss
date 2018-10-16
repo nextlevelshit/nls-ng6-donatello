@@ -1,5 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+// Variables
+@import "styles-variables";
 
+// External
+@import "~bootstrap/scss/bootstrap-grid";
+@import "~bootstrap/scss/card";
+@import "~bootstrap/scss/nav";
+@import "~bootstrap/scss/navbar";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/print";
+@import "~bootstrap/scss/root";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/utilities";
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:500,700|Roboto:300,400,400i,500');
+
+// Base
 body, html {
 
 }
@@ -9,3 +25,14 @@ body {
     overflow: hidden;
   }
 }
+
+a {
+  transition: ease 180ms;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+// Overrides
+@import "styles-overrides";

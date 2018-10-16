@@ -25,23 +25,34 @@ export class AppComponent implements AfterContentChecked, OnDestroy {
   }
 
   ngOnDestroy() {
-    this.headlines = null;
+    this.headlines = [];
   }
 
   protected retrieveMeta() {
-    this.metaService.retrieve().subscribe((res) => {
+    this.metaService.retrieve().subscribe((res: Meta) => {
       this.updateMeta(res);
     });
   }
 
   protected updateMeta(recievedMeta: Meta) {
-    this.headlines = recievedMeta.headlines;
+    if (!recievedMeta) {
+      return;
+    }
+    // Mandatory Meta Parameters
     this.docTitle.setTitle(recievedMeta.title);
     this.docMeta.updateTag({
       name: 'description', content: recievedMeta.description
     });
-    this.docMeta.updateTag({
-      name: 'keywords', content: recievedMeta.keywords.join(',')
-    });
+    // Optional Meta Parameters
+    if (recievedMeta.headlines.length > 0) {
+      this.headlines = recievedMeta.headlines;
+    } else {
+      this.headlines = [];
+    }
+    if (recievedMeta.keywords.length > 0) {
+      this.docMeta.updateTag({
+        name: 'keywords', content: recievedMeta.keywords.join(',')
+      });
+    }
   }
 }
