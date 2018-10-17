@@ -7,12 +7,16 @@
       <button class="btn btn-lg btn-outline-primary" (click)="close()">🞩 Close</button>
     </header>
     <main>
-      <figure *ngFor="let picture of item.pictures">
-        <img [src]="picture.fullPath" [alt]="picture.alt">
-        <figcaption *ngIf="picture.alt">
-          {{picture.alt}}
+      <figure *ngIf="currentPicture">
+        <img [src]="currentPicture.fullPath" [alt]="currentPicture.alt">
+        <figcaption *ngIf="currentPicture.alt">
+          {{currentPicture.alt}}
         </figcaption>
       </figure>
+      <div class="nls-details-action d-flex justify-content-between align-items-stretch">
+        <a class="nls-details-action-back d-flex align-items-center justify-content-start" (click)="defineCurrentPicture(currentIndex - 1)">«</a>
+        <a class="nls-details-action-next d-flex align-items-center justify-content-end" (click)="defineCurrentPicture(currentIndex + 1)">»</a>
+      </div>
     </main>
     <footer class="">
       <div class="d-flex justify-content-between align-items-center">
@@ -20,7 +24,7 @@
           <li *ngFor="let information of item.information">{{information}}</li>
         </ul>
         <div class="nls-details-indicator d-flex flex-column justify-content-between align-items-center">
-          <sup>1</sup>
+          <sup>{{currentIndex}}</sup>
           <span>—</span>
           <sub>{{item.pictures?.length}}</sub>
         </div>

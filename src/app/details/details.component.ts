@@ -20,6 +20,8 @@ export class DetailsComponent implements OnInit, OnDestroy {
   protected url: UrlSegment[];
   protected work: Work[];
   protected item: WorkItem;
+  public currentPicture: any | null;
+  public currentIndex: number;
 
   constructor(
     private route: ActivatedRoute,
@@ -27,8 +29,8 @@ export class DetailsComponent implements OnInit, OnDestroy {
     private workService: WorkService
   ) {
     this.listSubscription = this.workService.listSingleItems().subscribe(res => this.work = res);
-
     this.urlSubscription = route.url.subscribe((u) => this.url = u);
+    this.currentIndex = 0;
   }
 
   ngOnInit() {
@@ -36,6 +38,8 @@ export class DetailsComponent implements OnInit, OnDestroy {
 
     if (!this.findItem()) {
       return this.close();
+    } else {
+      this.defineCurrentPicture(1);
     }
   }
 
@@ -52,6 +56,20 @@ export class DetailsComponent implements OnInit, OnDestroy {
     return this.item;
   }
 
+  protected defineCurrentPicture(index: number) {
+    const picturesLength = this.item.pictures.length;
+
+    if (index > picturesLength) {
+      index = 1;
+    }
+    if  (index < 1) {
+      index = picturesLength;
+    }
+
+    this.currentIndex = index;
+    this.currentPicture = this.item.pictures[index - 1];
+  }
+
   public close() {
     this.router.navigate([
       {
@@ -62,5 +80,4 @@ export class DetailsComponent implements OnInit, OnDestroy {
     ]);
     return false;
   }
-
 }

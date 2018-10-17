@@ -42,6 +42,7 @@ $this-footer-height: 8rem;
 
   main {
     top: $this-header-height;
+    position: relative;
 
     figure {
 
@@ -68,6 +69,20 @@ $this-footer-height: 8rem;
       li {
 
       }
+    }
+  }
+
+  &-action {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    &-back,
+    &-next {
+      cursor: pointer;
+      width: 10vw;
     }
   }
 
