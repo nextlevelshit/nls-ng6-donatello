@@ -1,0 +1,12 @@
+<ul class="nls-sidebar-list">
+  <ng-template #recursiveTree let-tree>
+    <li class="nls-sidebar-list-item" *ngFor="let item of tree">
+      <a [href]="'#' + item.slug">{{item.plain}}</a>
+      <ul class="nls-sidebar-list" *ngIf="item.children">
+        <ng-container *ngTemplateOutlet="recursiveTree; context:{ $implicit: item.children }"></ng-container>
+      </ul>
+    </li>
+  </ng-template>
+</ul>
+
+<ng-container *ngTemplateOutlet="recursiveTree; context:{ $implicit: tree }"></ng-container>

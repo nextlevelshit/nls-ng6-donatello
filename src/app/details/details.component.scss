@@ -1,5 +1,8 @@
 @import "../../styles-variables";
 
+$this-header-height: 6rem;
+$this-footer-height: 5rem;
+
 .nls-details {
   z-index: $zindex-modal;
   position: fixed;
@@ -10,4 +13,71 @@
   overflow: hidden;
 
   background: $white;
+
+  article {
+    height: 100%;
+    position: relative;
+  }
+
+  header,
+  main,
+  footer {
+    position: absolute;
+    left: 0;
+    width: 100vw;
+  }
+
+  header {
+    height: $this-header-height;
+
+    h1 {
+
+    }
+
+    button {
+
+    }
+  }
+
+  main {
+    top: $this-header-height;
+
+    figure {
+
+      img {
+        height: 200px;
+        // width: 100%;
+        // height: auto;
+        // max-height: 100%;
+        margin: 0 auto;
+      }
+
+      figcaption {
+
+      }
+    }
+  }
+
+  footer {
+    height: $this-footer-height;
+    bottom: 0;
+
+    ul {
+
+      li {
+
+      }
+    }
+  }
+
+  &-indicator {
+
+    sup {}
+
+    hr {
+      transform: rotate(-45deg);
+    }
+
+    sub {}
+  }
 }

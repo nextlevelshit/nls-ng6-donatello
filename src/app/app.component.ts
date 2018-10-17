@@ -11,6 +11,7 @@ import { MetaService } from './meta/meta.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements AfterContentChecked, OnDestroy {
+  protected subscription: any;
   public headlines: any;
 
   constructor (
@@ -26,10 +27,11 @@ export class AppComponent implements AfterContentChecked, OnDestroy {
 
   ngOnDestroy() {
     this.headlines = [];
+    this.subscription.unsubscribe();
   }
 
   protected retrieveMeta() {
-    this.metaService.retrieve().subscribe((res: Meta) => {
+    this.subscription = this.metaService.retrieve().subscribe((res: Meta) => {
       this.updateMeta(res);
     });
   }

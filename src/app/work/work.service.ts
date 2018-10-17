@@ -192,4 +192,11 @@ export class WorkService {
       observer.next(this.work);
     });
   }
+
+  public listSingleItems(): Observable<Work[]> {
+    return new Observable(observer => {
+      const items = this.work.reduce((categories, category) => categories.concat(category.items), []);
+      observer.next(items);
+    });
+  }
 }
