@@ -44,12 +44,12 @@ export class AppComponent implements AfterContentChecked, OnDestroy {
       name: 'description', content: recievedMeta.description
     });
     // Optional Meta Parameters
-    if (recievedMeta.headlines.length > 0) {
+    if (recievedMeta.headlines) {
       this.headlines = recievedMeta.headlines;
     } else {
       this.headlines = [];
     }
-    if (recievedMeta.keywords.length > 0) {
+    if (recievedMeta.keywords) {
       this.docMeta.updateTag({
         name: 'keywords', content: recievedMeta.keywords.join(',')
       });

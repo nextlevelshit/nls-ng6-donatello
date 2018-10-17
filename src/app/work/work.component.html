@@ -7,23 +7,19 @@
   <header>
     <h2>{{category.title}}</h2>
   </header>
-  <div class="row">
-    <div class="col-md-3 mb-4" *ngFor="let item of category.items">
-      <div class="card box-shadow">
-        <a [routerLink]="[{outlets: {details: item.fullPath}}]">
-          <figure class="mb-0">
-            <img class="card-img-top" *ngIf="item.pictures.length > 0" [src]="item.pictures[0].fullPath" [alt]="item.pictures.alt">
-            <figcaption class="card-body">
-              <h5 class="card-title">{{item.title}}</h5>
-              <ul class="card-text list-inline mb-0" *ngIf="item.information">
-                <li class="list-inline-item" *ngFor="let information of item.information">
-                  <small class="text-muted">{{information}}</small>
-                </li>
-              </ul>
-            </figcaption>
-          </figure>
-        </a>
-      </div>
-    </div>
+  <div class="card-columns">
+    <a class="card" [routerLink]="[{outlets: {details: item.fullPath}}]" *ngFor="let item of category.items">
+      <figure class="mb-0">
+        <img class="card-img-top" *ngIf="item.pictures.length > 0" [src]="item.pictures[0].fullPath" [alt]="item.pictures.alt">
+        <figcaption class="card-body">
+          <h5 class="card-title">{{item.title}}</h5>
+          <ul class="card-text list-inline mb-0" *ngIf="item.information">
+            <li class="list-inline-item" *ngFor="let information of item.information">
+              <small class="text-muted">{{information}}</small>
+            </li>
+          </ul>
+        </figcaption>
+      </figure>
+    </a>
   </div>
 </article>

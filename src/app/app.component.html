@@ -1,10 +1,10 @@
 <header>
   <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main" aria-controls="main" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navigation" aria-controls="main-navigation" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse row flex-xl-nowrap align-items-center" id="main">
+    <div class="collapse navbar-collapse row flex-xl-nowrap align-items-center" id="main-navigation">
       <a class="navbar-brand col-12 col-md-3 col-xl-2" routerLink="/">Sarah<br>Esser</a>
       <div class="col-12 col-md-9 col-xl-10">
         <ul class="navbar-nav">
@@ -25,19 +25,12 @@
 
 <main class="container-fluid">
   <div class="row flex-xl-nowrap">
-    <section class="col-12 col-md-3 col-xl-2 bd-sidebar">
-      Subnavigation
-      <pre>{{headlines|json}}</pre>
-
-      <!-- <nav *ngIf="headlines">
-        <ul *ngIf="headlines" class="link-list">
-          <li *ngFor="let headline of headlines">
-            <a [href]="'#' + headline.slug">{{headline.plain}}</a>
-          </li>
-        </ul>
-      </nav> -->
+    <section class="col-12 col-md-3 col-xl-2">
+      <nav class="nls-sidebar pt-3" id="sub-navigation" *ngIf="headlines">
+        <nls-recursive-tree [tree]="headlines"></nls-recursive-tree>
+      </nav>
     </section>
-    <section class="col-12 col-md-9 col-xl-10">
+    <section class="col-12 col-md-9 col-xl-10 pt-3 pb-3"  data-spy="scroll" data-target="#sub-navigation" data-offset="0">
       <router-outlet></router-outlet>
     </section>
   </div>
@@ -47,15 +40,22 @@
   <router-outlet name="details"></router-outlet>
 </section>
 
-<footer class="footer">
+<footer class="nls-footer">
   <div class="container-fluid">
-    <ul class="list-inline">
-      <li class="list-inline-item">
-        <a routerLink="/page/imprint">Imprint</a>
-      </li>
-      <li class="list-inline-item">
-        <a routerLink="/page/disclaimer">Disclaimer</a>
-      </li>
-    </ul>
+    <div class="row">
+      <a class="col-12 col-md-3 col-xl-2" href="https://dailysh.it" target="_blank">
+        <small class="text-muted">made with ♥</small>
+      </a>
+      <div class="col-12 col-md-9 col-xl-10">
+        <ul class="list-inline mb-0 text-muted">
+          <li class="list-inline-item">
+            <a routerLink="/page/imprint">Imprint</a>
+          </li>
+          <li class="list-inline-item">
+            <a routerLink="/page/disclaimer">Disclaimer</a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </footer>

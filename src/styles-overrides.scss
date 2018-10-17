@@ -3,3 +3,11 @@ h1, h2, h3,
   text-transform: uppercase;
   letter-spacing: 0.2rem;
 }
+
+.card.shadow {
+  transition: ease $nls-transition-duration;
+
+  &:hover {
+    box-shadow: 0 0 0 rgba(0,0,0,0);
+  }
+}

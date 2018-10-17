@@ -1,13 +1,10 @@
 @import "../styles-variables";
 
-$this-navbar-brand-line-height: .9;
-$this-footer-height: 4rem;
-
 .navbar {
 
   &-brand {
     margin: 0;
-    line-height: $this-navbar-brand-line-height;
+    line-height: $nls-navbar-brand-line-height;
     text-transform: uppercase;
     font-family: $headings-font-family;
     font-weight: $headings-font-weight;
@@ -37,18 +34,4 @@ $this-footer-height: 4rem;
       }
     }
   }
-}
-
-body {
-  padding-top: $this-navbar-brand-line-height * $navbar-brand-font-size * 2 + $navbar-padding-y * 2;
-  margin-bottom: $this-footer-height;
-}
-
-.footer {
-  // position: absolute;
-  // bottom: 0;
-  // width: 100%;
-  height: $this-footer-height;
-  line-height: $this-footer-height;
-  background-color: $gray-100;
 }

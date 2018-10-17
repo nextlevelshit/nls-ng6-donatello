@@ -2,8 +2,11 @@
 @import "styles-variables";
 
 // External
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/reboot";
 @import "~bootstrap/scss/bootstrap-grid";
 @import "~bootstrap/scss/card";
+@import "~bootstrap/scss/list-group";
 @import "~bootstrap/scss/nav";
 @import "~bootstrap/scss/navbar";
 @import "~bootstrap/scss/mixins";
@@ -16,21 +19,44 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:500,700|Roboto:300,400,400i,500');
 
 // Base
-body, html {
-
+html {
+  position: relative;
+  min-height: 100%;
 }
 
 body {
+  margin-top: $nls-navbar-height;
+  margin-bottom: $nls-footer-height;
+
   &.nls-overlay {
     overflow: hidden;
   }
 }
 
 a {
-  transition: ease 180ms;
+  transition: ease $nls-transition-duration;
 
   &:hover {
     text-decoration: none;
+  }
+}
+
+// Components
+
+.nls {
+
+  &-sidebar {
+    position: sticky;
+    top: $nls-navbar-height;
+  }
+
+  &-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: $nls-footer-height;
+    line-height: $nls-footer-height;
+    background-color: $gray-100;
   }
 }
 

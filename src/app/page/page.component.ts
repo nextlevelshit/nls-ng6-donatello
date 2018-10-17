@@ -24,7 +24,35 @@ export class PageComponent {
       this.metaService.update({
         title: `${this.slug} title`,
         description: `${this.slug} description`,
-        headlines: []
+        headlines: [
+          {
+            slug: 'yeah',
+            plain: `Yeah, ${this.slug} works`
+          },
+          {
+            slug: 'yeah',
+            plain: `Yeah, ${this.slug} works`,
+            children: [
+              {
+                slug: 'children',
+                plain: 'children work',
+                children: [
+                  {
+                    slug: 'children',
+                    plain: 'children work',
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            slug: 'yeah',
+            plain: `Yeah, ${this.slug} works`
+          },          {
+            slug: 'yeah',
+            plain: `Yeah, ${this.slug} works`
+          }
+        ]
       });
     });
   }

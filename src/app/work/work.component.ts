@@ -42,12 +42,18 @@ export class WorkComponent implements OnDestroy {
       ],
       headlines: [
         {
-          slug: 'sculpture',
-          plain: 'Skulpturen'
-        },
-        {
-          slug: 'drawing',
-          plain: 'Zeichnung'
+          slug: 'work',
+          plain: 'Work',
+          children: [
+            {
+              slug: 'sculpture',
+              plain: 'Skulpturen'
+            },
+            {
+              slug: 'drawing',
+              plain: 'Zeichnung'
+            }
+          ]
         }
       ]
     });
