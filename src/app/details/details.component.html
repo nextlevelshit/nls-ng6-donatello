@@ -1,11 +1,6 @@
 <section class="nls-details">
   <article>
-    <header class="d-flex justify-content-between align-items-center">
-      <h1>
-        {{item.title}}
-      </h1>
-      <button class="btn btn-lg btn-outline-primary" (click)="close()">🞩 Close</button>
-    </header>
+    <button class="btn btn-lg btn-outline-primary" (click)="close()">🞩 Close</button>
     <main>
       <figure class="d-flex flex-column justify-content-between align-items-stretch" *ngIf="currentPicture">
         <img [src]="currentPicture.fullPath" [alt]="currentPicture.alt">
@@ -17,7 +12,7 @@
       <div class="d-flex justify-content-between align-items-center">
         <div>
           <h2>
-            {{currentPicture.alt}}
+            {{item.title}}
           </h2>
           <ul class="list-inline">
             <li class="list-inline-item" *ngFor="let information of item.information">{{information}}</li>

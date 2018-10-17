@@ -1,7 +1,6 @@
 @import "../../styles-variables";
 
-$this-header-height: 6rem;
-$this-footer-height: 6rem;
+$this-footer-height: 5rem;
 
 .nls-details {
   z-index: $zindex-modal;
@@ -19,29 +18,22 @@ $this-footer-height: 6rem;
     position: relative;
   }
 
-  header,
   main,
   footer {
     position: absolute;
-    background: $white;
     width: 100%;
     padding: (.5 * $spacer) ($spacer);
   }
 
-  header {
-    height: $this-header-height;
-
-    h1 {
-
-    }
-
-    button {
-
-    }
+  button {
+    position: absolute;
+    top: $spacer;
+    right: $spacer;
+    z-index: 1060;
   }
 
   main {
-    top: $this-header-height;
+    top: .5 * $spacer;
     bottom: $this-footer-height;
 
     figure {
