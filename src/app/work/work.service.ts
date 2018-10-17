@@ -17,7 +17,7 @@ export class WorkService {
         fullPath: 'work/sculpture/',
         items: [
           {
-            title: 'Gähnschreier',
+            title: 'Schlagwerker',
             fullPath: 'work/sculpture/WV-2016-010',
             information: [
               '200 x 300 cm',
@@ -27,7 +27,23 @@ export class WorkService {
             pictures: [
               {
                 fullPath:  '/app/_content/work/sculpture/WV-2016-010/WV-2016-010-0.JPG',
-                alt: 'Details of Gähnschreier'
+                alt: 'Details of Schlagwerker 1'
+              },
+              {
+                fullPath:  '/app/_content/work/sculpture/WV-2016-010/WV-2016-010-0.JPG',
+                alt: 'Details of Schlagwerker 2'
+              },
+              {
+                fullPath:  '/app/_content/work/sculpture/WV-2016-010/WV-2016-010-0.JPG',
+                alt: 'Details of Schlagwerker 3'
+              },
+              {
+                fullPath:  '/app/_content/work/sculpture/WV-2016-010/WV-2016-010-0.JPG',
+                alt: 'Details of Schlagwerker 4'
+              },
+              {
+                fullPath:  '/app/_content/work/sculpture/WV-2016-010/WV-2016-010-0.JPG',
+                alt: 'Details of Schlagwerker 5'
               }
             ]
           },
@@ -42,6 +58,22 @@ export class WorkService {
               'macht Freude'
             ],
             pictures: [
+              {
+                fullPath:  '/app/_content/work/sculpture/WV-2016-010/WV-2016-010-0.JPG',
+                alt: 'Details of Gähnschreier'
+              },
+              {
+                fullPath:  '/app/_content/work/sculpture/WV-2016-010/WV-2016-010-0.JPG',
+                alt: 'Details of Gähnschreier'
+              },
+              {
+                fullPath:  '/app/_content/work/sculpture/WV-2016-010/WV-2016-010-0.JPG',
+                alt: 'Details of Gähnschreier'
+              },
+              {
+                fullPath:  '/app/_content/work/sculpture/WV-2016-010/WV-2016-010-0.JPG',
+                alt: 'Details of Gähnschreier'
+              },
               {
                 fullPath:  '/app/_content/work/sculpture/WV-2016-010/WV-2016-010-0.JPG',
                 alt: 'Details of Gähnschreier'

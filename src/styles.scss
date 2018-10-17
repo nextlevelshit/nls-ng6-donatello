@@ -1,10 +1,12 @@
 // Variables
 @import "styles-variables";
 
-// External
+// Bootstrap Reboot
 @import "~bootstrap/scss/mixins";
 @import "~bootstrap/scss/reboot";
 @import "~bootstrap/scss/bootstrap-grid";
+// Bootstrap Components
+@import "~bootstrap/scss/buttons";
 @import "~bootstrap/scss/card";
 @import "~bootstrap/scss/list-group";
 @import "~bootstrap/scss/nav";

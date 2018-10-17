@@ -1,6 +1,6 @@
 import { ActivatedRoute } from '@angular/router';
-import { Component } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { Component, OnDestroy } from '@angular/core';
+import { Observable, of, Subscription } from 'rxjs';
 
 import { MetaService } from './../meta/meta.service';
 
@@ -9,16 +9,17 @@ import { MetaService } from './../meta/meta.service';
   templateUrl: './page.component.html',
   styleUrls: ['./page.component.scss']
 })
-export class PageComponent {
+export class PageComponent implements OnDestroy {
   protected params: any;
   protected content: any;
-  protected slug: String;
+  protected slug: string;
+  protected urlSubscription: Subscription;
 
   constructor(
     private route: ActivatedRoute,
     private metaService: MetaService
   ) {
-    route.url.subscribe((u) => {
+    this.urlSubscription = route.url.subscribe((u) => {
       this.slug = route.snapshot.params.slug;
       this.content = this.markdown();
       this.metaService.update({
@@ -55,6 +56,10 @@ export class PageComponent {
         ]
       });
     });
+  }
+
+  ngOnDestroy() {
+    this.urlSubscription.unsubscribe();
   }
 
   protected markdown() {

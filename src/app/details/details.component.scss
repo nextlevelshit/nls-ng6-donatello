@@ -1,7 +1,7 @@
 @import "../../styles-variables";
 
 $this-header-height: 6rem;
-$this-footer-height: 5rem;
+$this-footer-height: 8rem;
 
 .nls-details {
   z-index: $zindex-modal;
@@ -23,8 +23,9 @@ $this-footer-height: 5rem;
   main,
   footer {
     position: absolute;
-    left: 0;
-    width: 100vw;
+    background: $white;
+    width: 100%;
+    padding: (.5 * $spacer) ($spacer);
   }
 
   header {
@@ -59,7 +60,7 @@ $this-footer-height: 5rem;
   }
 
   footer {
-    height: $this-footer-height;
+    max-height: $this-footer-height;
     bottom: 0;
 
     ul {
@@ -72,12 +73,29 @@ $this-footer-height: 5rem;
 
   &-indicator {
 
-    sup {}
+    $this-indicator-translate: .75rem;
 
-    hr {
-      transform: rotate(-45deg);
+    min-width: 4rem;
+
+    sup,
+    sub {
+      font-size: $font-size-lg;
+      font-weight: $font-weight-bold;
     }
 
-    sub {}
+    sup {
+      color: $gray-600;
+      transform: translateX(-$this-indicator-translate);
+    }
+
+    span {
+      transform: scale(2) rotate(-45deg);
+      color: $gray-500;
+    }
+
+    sub {
+      color: $gray-500;
+      transform: translateX($this-indicator-translate);
+    }
   }
 }
