@@ -46,7 +46,7 @@ export class PageComponent implements OnDestroy {
       responseType: 'text'
     }).subscribe(
       res => {
-        this.mdService.parseRaw(res);
+        this.mdService.parseInput(res);
         this.updateContent();
         this.updateMeta();
       },

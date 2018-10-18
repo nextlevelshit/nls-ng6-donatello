@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import * as slugify from 'slugify';
+import slugify from 'slugify';
+import yaml from 'js-yaml';
 
 import { Meta } from './../model/meta';
 
@@ -9,25 +10,44 @@ import { Meta } from './../model/meta';
 export class MarkdownService {
   protected lines: string[];
   protected raw: string;
+  protected metaRaw: string[];
+  protected contentRaw: string[];
 
   constructor() { }
 
-  public parseRaw(raw: any) {
-    this.raw = raw;
+  public parseInput(raw: any) {
     this.lines = raw.split('\n');
+    this.raw = raw;
+    this.splitRaw();
   }
 
-  public get meta(): Meta {
+  protected splitRaw() {
+    const correctionValue = 1;
+
+    const separatorIndex
+      = this.lines
+        .slice(correctionValue, -1)
+        .findIndex(line => {
+          return line.search(/(\S)\1{2,}/) === 0;
+        }) + correctionValue;
+
+    this.metaRaw = this.lines.slice(0, separatorIndex);
+    this.contentRaw = this.lines.slice(separatorIndex + 1, -1);
+
+    console.log(this.lines, separatorIndex);
+  }
+
+  public get meta() {
+    const metaParsed = yaml.safeLoad(this.metaRaw.join('\n'), 'utf8');
+
     return {
-      title: '',
-      description: '',
-      keywords: [],
-      headlines: this.headlines
+      headlines: this.headlines,
+      ...metaParsed
     };
   }
 
   public get content() {
-    return this.raw;
+    return this.contentRaw.join('\n');
   }
 
   public get headlines() {

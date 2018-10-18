@@ -1,6 +1,7 @@
 import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
 
+import { environment as env } from './../../environments/environment';
 import { Meta } from './../model/meta';
 
 @Injectable({
@@ -21,7 +22,7 @@ export class MetaService {
 
   public update(updatedMeta: Meta): void {
     this.meta = {
-      ...this.meta,
+      ...env.meta,
       ...updatedMeta
     };
   }
