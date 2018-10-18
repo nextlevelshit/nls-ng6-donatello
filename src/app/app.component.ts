@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy, AfterContentChecked } from '@angular/core';
 import { Meta as DocumentMeta, Title as DocumentTitle } from '@angular/platform-browser';
-import { Observable } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 
 import { Meta } from './model/meta';
 import { MetaService } from './meta/meta.service';
@@ -11,8 +11,10 @@ import { MetaService } from './meta/meta.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements AfterContentChecked, OnDestroy {
-  protected subscription: any;
+  protected metaSubscription: any;
+  protected urlSubscription: Subscription;
   public headlines: any;
+  public currentUrl: any;
 
   constructor (
     private metaService: MetaService,
@@ -23,15 +25,17 @@ export class AppComponent implements AfterContentChecked, OnDestroy {
 
   ngAfterContentChecked() {
     this.retrieveMeta();
+    this.currentUrl = window.location.origin + window.location.pathname;
   }
 
   ngOnDestroy() {
     this.headlines = [];
-    this.subscription.unsubscribe();
+    this.metaSubscription.unsubscribe();
+    this.urlSubscription.unsubscribe();
   }
 
   protected retrieveMeta() {
-    this.subscription = this.metaService.retrieve().subscribe((res: Meta) => {
+    this.metaSubscription = this.metaService.retrieve().subscribe((res: Meta) => {
       this.updateMeta(res);
     });
   }

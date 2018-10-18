@@ -8,5 +8,6 @@ import { Component, Input } from '@angular/core';
 export class RecursiveTreeComponent {
 
   @Input() protected tree;
+  @Input() protected baseHref;
 
 }

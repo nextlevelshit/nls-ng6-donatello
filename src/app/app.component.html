@@ -30,7 +30,7 @@
   <div class="row flex-xl-nowrap">
     <section class="col-12 col-md-3 col-xl-2">
       <nav class="nls-sidebar pt-3" id="sub-navigation" *ngIf="headlines">
-        <nls-recursive-tree [tree]="headlines"></nls-recursive-tree>
+        <nls-recursive-tree [tree]="headlines" [baseHref]="currentUrl"></nls-recursive-tree>
       </nav>
     </section>
     <section class="col-12 col-md-9 col-xl-10 pt-3 pb-3"  data-spy="scroll" data-target="#sub-navigation" data-offset="0">
