@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { MarkdownModule, MarkedOptions } from 'ngx-markdown';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -20,6 +21,7 @@ import { RecursiveTreeComponent } from './recursive-tree/recursive-tree.componen
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     MarkdownModule.forRoot(),
   ],
   providers: [],

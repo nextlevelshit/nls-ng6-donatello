@@ -1,6 +1,10 @@
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnDestroy } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { Observable, of, Subscription } from 'rxjs';
+import { tap } from 'rxjs/operators';
+import { Converter } from 'showdown';
+import * as slugify from 'slugify';
 
 import { MetaService } from './../meta/meta.service';
 
@@ -14,73 +18,67 @@ export class PageComponent implements OnDestroy {
   protected content: any;
   protected slug: string;
   protected urlSubscription: Subscription;
+  protected fileSubscription: Subscription;
+  protected metadata: any;
+  protected headlines: any;
+  protected slugify: any;
 
   constructor(
     private route: ActivatedRoute,
-    private metaService: MetaService
+    private router: Router,
+    private metaService: MetaService,
+    private http: HttpClient
   ) {
     this.urlSubscription = route.url.subscribe((u) => {
       this.slug = route.snapshot.params.slug;
-      this.content = this.markdown();
-      this.metaService.update({
-        title: `${this.slug} title`,
-        description: `${this.slug} description`,
-        headlines: [
-          {
-            slug: 'yeah',
-            plain: `Yeah, ${this.slug} works`
-          },
-          {
-            slug: 'yeah',
-            plain: `Yeah, ${this.slug} works`,
-            children: [
-              {
-                slug: 'children',
-                plain: 'children work',
-                children: [
-                  {
-                    slug: 'children',
-                    plain: 'children work',
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            slug: 'yeah',
-            plain: `Yeah, ${this.slug} works`
-          },          {
-            slug: 'yeah',
-            plain: `Yeah, ${this.slug} works`
-          }
-        ]
-      });
+      this.loadPage();
     });
   }
 
   ngOnDestroy() {
     this.urlSubscription.unsubscribe();
+    this.fileSubscription.unsubscribe();
   }
 
-  protected markdown() {
-    return `
-      # Yeah, ${this.slug} works
+  protected loadPage() {
+    const url = ['app/_content/', this.slug, '.md'].join('');
 
-      This is my first example of using *markdown*:
+    this.fileSubscription = this.http.get(url, {
+      responseType: 'text'
+    }).subscribe(
+      res => {
+        this.parseResponse(res);
+        this.updateMeta();
+      },
+      error => this.router.navigate(['/'])
+    );
+  }
 
-      - Listing
-      - is
-      - quiet simple
+  protected parseResponse(res) {
+    const lines = res.split('\n');
+    const headlinesRaw = lines.filter(line => {
+      return line.startsWith('#');
+    });
 
-      1. Ordered
-      2. lists
-         1. Are
-         2. also
-         3. possible
+    this.headlines = headlinesRaw.map((headline, i, map) => {
+      const plain = headline.replace(/[#]+/g, '').trim();
+      return {
+        plain: plain,
+        slug: slugify(plain, {lower: true})
+      };
+    });
+    this.content = res;
+    this.metadata = {
+      title: 'test',
+      description: 'test'
+    };
+  }
 
-      > Quoting works as well
-
-      But whats about [links to work](/work)
-    `;
+  protected updateMeta() {
+    this.metaService.update({
+      title: this.metadata.title,
+      description: this.metadata.description,
+      headlines: this.headlines
+    });
   }
 }

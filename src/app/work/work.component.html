@@ -1,11 +1,17 @@
 <header>
-  <h1>Work</h1>
+  <h1>
+    <a id="work" aria-hidden="true"></a>
+    Work
+  </h1>
   <p>Unbelievable, but that is my shit!</p>
 </header>
 
 <article *ngFor="let category of work">
   <header>
-    <h2>{{category.title}}</h2>
+    <h2>
+      <a [id]="category.slug" aria-hidden="true"></a>
+      {{category.title}}
+    </h2>
   </header>
   <div class="row">
     <a class="card col-12 col-sm-2 col-md-3 mb-4" [routerLink]="[{outlets: {details: item.fullPath}}]" *ngFor="let item of category.items">
