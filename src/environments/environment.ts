@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false,
+  contentDir: '',
   meta: {
     title: 'SARAH ESSER - Artist from Berlin',
     description: '',

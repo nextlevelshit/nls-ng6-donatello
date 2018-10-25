@@ -4,6 +4,7 @@
 /dist
 /tmp
 /out-tsc
+/src/app/_content/paths.json
 
 # dependencies
 /node_modules
