@@ -11,7 +11,8 @@
     "target": "es5",
     "typeRoots": [
       "node_modules/@types",
-      "node_modules/ng2-slugify"
+      "node_modules/ng2-slugify",
+      "node_modules/nls-directree-searchonly",
     ],
     "lib": [
       "es2017",

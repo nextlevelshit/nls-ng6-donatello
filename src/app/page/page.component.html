@@ -1,3 +1,5 @@
-<article>
+<article *ngIf="content">
   <markdown [data]="content" ngPreserveWhitespaces></markdown>
 </article>
+
+<nls-not-found *ngIf="notFound"></nls-not-found>

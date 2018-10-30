@@ -9,6 +9,7 @@ import { PageComponent } from './page/page.component';
 import { WorkComponent } from './work/work.component';
 import { DetailsComponent } from './details/details.component';
 import { RecursiveTreeComponent } from './recursive-tree/recursive-tree.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { RecursiveTreeComponent } from './recursive-tree/recursive-tree.componen
     PageComponent,
     WorkComponent,
     DetailsComponent,
-    RecursiveTreeComponent
+    RecursiveTreeComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

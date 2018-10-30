@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { WorkComponent } from './work/work.component';
 import { PageComponent } from './page/page.component';
 import { DetailsComponent } from './details/details.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
   {

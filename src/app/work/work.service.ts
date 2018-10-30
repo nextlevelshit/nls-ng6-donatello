@@ -1,17 +1,34 @@
-import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Injectable, OnDestroy } from '@angular/core';
+import { Observable, Subscription } from 'rxjs';
 
 import { Work } from './../model/work';
+import { SitemapService } from './../sitemap/sitemap.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class WorkService {
+export class WorkService implements OnDestroy {
 
-  work: Work[];
+  protected sitemapSubscription: Subscription;
+  public work: Work[];
+  public sitemap: any[];
 
-  constructor() {
-    this.work = [
+  constructor(
+    private sitemapService: SitemapService
+  ) {
+    this.sitemapSubscription = this.sitemapService.find('work').subscribe(sitemap => {
+      console.log(sitemap);
+      this.work = this.parseWork(sitemap);
+    });
+  }
+
+  ngOnDestroy() {
+    this.sitemapSubscription.unsubscribe();
+  }
+
+  protected parseWork(sitemap: object): Work[] {
+
+    return [
       {
         title: 'Sculptures',
         fullPath: 'work/sculpture/',
@@ -26,23 +43,23 @@ export class WorkService {
             ],
             pictures: [
               {
-                fullPath:  '/app/_content/work/sculpture/WV-2016-010/WV-2016-010-0.JPG',
+                fullPath:  '/content/work/sculpture/WV-2016-010/WV-2016-010-0.JPG',
                 alt: 'Details of Schlagwerker 1'
               },
               {
-                fullPath:  '/app/_content/work/sculpture/WV-2016-010/WV-2016-010-0.JPG',
+                fullPath:  '/content/work/sculpture/WV-2016-010/WV-2016-010-0.JPG',
                 alt: 'Details of Schlagwerker 2'
               },
               {
-                fullPath:  '/app/_content/work/sculpture/WV-2016-010/WV-2016-010-0.JPG',
+                fullPath:  '/content/work/sculpture/WV-2016-010/WV-2016-010-0.JPG',
                 alt: 'Details of Schlagwerker 3'
               },
               {
-                fullPath:  '/app/_content/work/sculpture/WV-2016-010/WV-2016-010-0.JPG',
+                fullPath:  '/content/work/sculpture/WV-2016-010/WV-2016-010-0.JPG',
                 alt: 'Details of Schlagwerker 4'
               },
               {
-                fullPath:  '/app/_content/work/sculpture/WV-2016-010/WV-2016-010-0.JPG',
+                fullPath:  '/content/work/sculpture/WV-2016-010/WV-2016-010-0.JPG',
                 alt: 'Details of Schlagwerker 5'
               }
             ]
@@ -59,23 +76,23 @@ export class WorkService {
             ],
             pictures: [
               {
-                fullPath:  '/app/_content/work/sculpture/WV-2016-010/WV-2016-010-0.JPG',
+                fullPath:  '/content/work/sculpture/WV-2016-010/WV-2016-010-0.JPG',
                 alt: 'Details of Gähnschreier'
               },
               {
-                fullPath:  '/app/_content/work/sculpture/WV-2016-010/WV-2016-010-0.JPG',
+                fullPath:  '/content/work/sculpture/WV-2016-010/WV-2016-010-0.JPG',
                 alt: 'Details of Gähnschreier'
               },
               {
-                fullPath:  '/app/_content/work/sculpture/WV-2016-010/WV-2016-010-0.JPG',
+                fullPath:  '/content/work/sculpture/WV-2016-010/WV-2016-010-0.JPG',
                 alt: 'Details of Gähnschreier'
               },
               {
-                fullPath:  '/app/_content/work/sculpture/WV-2016-010/WV-2016-010-0.JPG',
+                fullPath:  '/content/work/sculpture/WV-2016-010/WV-2016-010-0.JPG',
                 alt: 'Details of Gähnschreier'
               },
               {
-                fullPath:  '/app/_content/work/sculpture/WV-2016-010/WV-2016-010-0.JPG',
+                fullPath:  '/content/work/sculpture/WV-2016-010/WV-2016-010-0.JPG',
                 alt: 'Details of Gähnschreier'
               }
             ]
@@ -94,7 +111,7 @@ export class WorkService {
             ],
             pictures: [
               {
-                fullPath:  '/app/_content/work/sculpture/WV-2016-010/WV-2016-010-0.JPG',
+                fullPath:  '/content/work/sculpture/WV-2016-010/WV-2016-010-0.JPG',
                 alt: 'Details of Gähnschreier'
               }
             ]
@@ -109,7 +126,7 @@ export class WorkService {
             ],
             pictures: [
               {
-                fullPath:  '/app/_content/work/sculpture/WV-2016-010/WV-2016-010-0.JPG',
+                fullPath:  '/content/work/sculpture/WV-2016-010/WV-2016-010-0.JPG',
                 alt: 'Details of Gähnschreier'
               }
             ]
@@ -124,7 +141,7 @@ export class WorkService {
             ],
             pictures: [
               {
-                fullPath:  '/app/_content/work/sculpture/WV-2016-010/WV-2016-010-0.JPG',
+                fullPath:  '/content/work/sculpture/WV-2016-010/WV-2016-010-0.JPG',
                 alt: 'Details of Gähnschreier'
               }
             ]
@@ -148,7 +165,7 @@ export class WorkService {
             ],
             pictures: [
               {
-                fullPath: '/app/_content/work/drawing/Z-WV-2018-001/Z-WV-2018-001-0.jpeg',
+                fullPath: '/content/work/drawing/Z-WV-2018-001/Z-WV-2018-001-0.jpeg',
                 alt: 'Details of Drawing'
               }
             ]
@@ -163,7 +180,7 @@ export class WorkService {
             ],
             pictures: [
               {
-                fullPath: '/app/_content/work/drawing/Z-WV-2018-001/Z-WV-2018-001-0.jpeg',
+                fullPath: '/content/work/drawing/Z-WV-2018-001/Z-WV-2018-001-0.jpeg',
                 alt: 'Details of Drawing'
               }
             ]
@@ -176,7 +193,7 @@ export class WorkService {
             ],
             pictures: [
               {
-                fullPath: '/app/_content/work/drawing/Z-WV-2018-001/Z-WV-2018-001-0.jpeg',
+                fullPath: '/content/work/drawing/Z-WV-2018-001/Z-WV-2018-001-0.jpeg',
                 alt: 'Details of Drawing'
               }
             ]
@@ -191,7 +208,7 @@ export class WorkService {
             ],
             pictures: [
               {
-                fullPath: '/app/_content/work/drawing/Z-WV-2018-001/Z-WV-2018-001-0.jpeg',
+                fullPath: '/content/work/drawing/Z-WV-2018-001/Z-WV-2018-001-0.jpeg',
                 alt: 'Details of Drawing'
               }
             ]
@@ -209,7 +226,7 @@ export class WorkService {
             ],
             pictures: [
               {
-                fullPath: '/app/_content/work/drawing/Z-WV-2018-001/Z-WV-2018-001-0.jpeg',
+                fullPath: '/content/work/drawing/Z-WV-2018-001/Z-WV-2018-001-0.jpeg',
                 alt: 'Details of Drawing'
               }
             ]

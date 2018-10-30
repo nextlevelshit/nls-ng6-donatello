@@ -44,7 +44,8 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/app/_content"
+              "src/app/_content",
+              "src/content"
             ],
             "styles": [
               "src/styles.scss"

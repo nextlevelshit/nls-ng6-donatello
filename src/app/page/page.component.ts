@@ -4,13 +4,13 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, of, Subscription } from 'rxjs';
 import { tap } from 'rxjs/operators';
 
+import { environment as env } from './../../environments/environment';
 import { MetaService } from './../meta/meta.service';
 import { MarkdownService } from './../markdown/markdown.service';
 
 @Component({
   selector: 'nls-page',
-  templateUrl: './page.component.html',
-  styleUrls: ['./page.component.scss']
+  templateUrl: './page.component.html'
 })
 export class PageComponent implements OnDestroy {
   protected params: any;
@@ -20,6 +20,7 @@ export class PageComponent implements OnDestroy {
   protected fileSubscription: Subscription;
   protected metadata: any;
   protected headlines: any;
+  protected notFound: boolean | null;
 
   constructor(
     private route: ActivatedRoute,
@@ -29,6 +30,7 @@ export class PageComponent implements OnDestroy {
     private mdService: MarkdownService
   ) {
     this.urlSubscription = route.url.subscribe((u) => {
+      this.notFound = false;
       this.slug = route.snapshot.params.slug;
       this.loadPage();
     });
@@ -40,7 +42,7 @@ export class PageComponent implements OnDestroy {
   }
 
   protected loadPage() {
-    const url = ['app/_content/', this.slug, '.md'].join('');
+    const url = [env.contentUrl, this.slug, '.md'].join('');
 
     this.fileSubscription = this.http.get(url, {
       responseType: 'text'
@@ -50,7 +52,7 @@ export class PageComponent implements OnDestroy {
         this.updateContent();
         this.updateMeta();
       },
-      error => this.router.navigate(['/'])
+      error => this.notFound = true
     );
   }
 

@@ -1,0 +1,35 @@
+{
+  "paths": [
+    "contact.md",
+    "disclaimer.md",
+    "imprint.md",
+    "index.md",
+    "news.md",
+    "paths.json",
+    "vita.md",
+    {
+      "work": [
+        {
+          "drawing": [
+            {
+              "Z-WV-2018-001": [
+                "Z-WV-2018-001-0.jpeg",
+                "index.md"
+              ]
+            }
+          ]
+        },
+        {
+          "sculpture": [
+            {
+              "WV-2016-010": [
+                "WV-2016-010-0.JPG",
+                "index.md"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
