@@ -1,32 +1,24 @@
-import { Injectable, OnDestroy } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Observable, Subscription } from 'rxjs';
 
-import { Work } from './../model/work';
+import { IWork } from './../model/work';
 import { SitemapService } from './../sitemap/sitemap.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class WorkService implements OnDestroy {
+export class WorkService {
 
   protected sitemapSubscription: Subscription;
-  public work: Work[];
+  public work: IWork[];
   public sitemap: any[];
 
   constructor(
     private sitemapService: SitemapService
   ) {
-    this.sitemapSubscription = this.sitemapService.find('work').subscribe(sitemap => {
-      console.log(sitemap);
-      this.work = this.parseWork(sitemap);
-    });
   }
 
-  ngOnDestroy() {
-    this.sitemapSubscription.unsubscribe();
-  }
-
-  protected parseWork(sitemap: object): Work[] {
+  protected parseWork(sitemap: object): IWork[] {
 
     return [
       {
@@ -236,16 +228,14 @@ export class WorkService implements OnDestroy {
     ];
   }
 
-  public listAll(): Observable<Work[]> {
-    return new Observable(observer => {
-      observer.next(this.work);
-    });
+  public all(): Observable<any> {
+    return this.sitemapService.work();
   }
 
-  public listSingleItems(): Observable<Work[]> {
-    return new Observable(observer => {
-      const items = this.work.reduce((categories, category) => categories.concat(category.items), []);
-      observer.next(items);
-    });
-  }
+  // public listSingleItems(): Observable<Work[]> {
+  //   return new Observable(observer => {
+  //     const items = this.work.reduce((categories, category) => categories.concat(category.items), []);
+  //     observer.next(items);
+  //   });
+  // }
 }

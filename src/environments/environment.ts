@@ -5,15 +5,18 @@
 export const environment = {
   production: false,
   contentDir: '',
-  contentUrl: 'content/',
-  sitemapUrl: 'content/sitemap.json',
+  contentUrl: '/content/',
+  workUrl: '/content/work/',
+  workDir: 'work',
+  sitemapUrl: '/content/sitemap.json',
   sitemapFileName: 'sitemap.json',
   sitemapIdentifier: 'paths',
   meta: {
     title: 'SARAH ESSER - Artist from Berlin',
     description: '',
     keywords: [],
-  }
+  },
+  allowedPictures: ['.jpg', '.jpeg', '.png']
 };
 
 /*

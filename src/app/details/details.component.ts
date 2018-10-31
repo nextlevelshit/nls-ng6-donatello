@@ -2,7 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router, ActivatedRoute, UrlSegment } from '@angular/router';
 import { Subscription } from 'rxjs';
 
-import { Work, WorkItem } from './../model/work';
+import { IWork, IWorkItem } from './../model/work';
 import { WorkService } from '../work/work.service';
 
 const OVERLAY_CLASS = 'nls-overlay';
@@ -15,11 +15,11 @@ const OVERLAY_CLASS = 'nls-overlay';
 })
 export class DetailsComponent implements OnInit, OnDestroy {
 
-  protected listSubscription: Subscription;
+  // protected listSubscription: Subscription;
   protected urlSubscription: Subscription;
   protected url: UrlSegment[];
-  protected work: Work[];
-  protected item: WorkItem;
+  protected work: IWork[];
+  protected item: IWorkItem;
   public currentPicture: any | null;
   public currentIndex: number;
 
@@ -28,7 +28,7 @@ export class DetailsComponent implements OnInit, OnDestroy {
     private router: Router,
     private workService: WorkService
   ) {
-    this.listSubscription = this.workService.listSingleItems().subscribe(res => this.work = res);
+    // this.listSubscription = this.workService.listSingleItems().subscribe(res => this.work = res);
     this.urlSubscription = route.url.subscribe((u) => this.url = u);
     this.currentIndex = 0;
   }
@@ -45,11 +45,11 @@ export class DetailsComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     document.body.classList.remove(OVERLAY_CLASS);
-    this.listSubscription.unsubscribe();
+    // this.listSubscription.unsubscribe();
   }
 
   protected findItem() {
-    this.item = this.work.find((item: WorkItem) => {
+    this.item = this.work.find((item: IWorkItem) => {
       return item.fullPath === this.url.join('/');
     });
 

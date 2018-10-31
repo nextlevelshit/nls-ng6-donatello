@@ -2,7 +2,7 @@ import { Component, OnDestroy } from '@angular/core';
 import { Observable, Subscription } from 'rxjs';
 
 import { MetaService } from './../meta/meta.service';
-import { WorkItem, Work } from '../model/work';
+import { IWorkItem, IWork } from '../model/work';
 import { WorkService } from './work.service';
 
 @Component({
@@ -12,16 +12,18 @@ import { WorkService } from './work.service';
 })
 export class WorkComponent implements OnDestroy {
 
-  protected work: Work[];
+  protected work: any;
+  // protected work: Work[];
   protected listSubscription: Subscription;
 
   constructor(
     private metaService: MetaService,
     private workService: WorkService
   ) {
-    this.listSubscription = this.workService.listAll().subscribe(res => {
-      this.updateWork(res);
+    this.listSubscription = this.workService.all().subscribe(res => {
+      console.log('WorkComponent', res);
       this.updateMeta();
+      this.updateWork(res);
     });
   }
 
@@ -58,12 +60,12 @@ export class WorkComponent implements OnDestroy {
     });
   }
 
-  protected updateWork(updatedWorkList: Work[]) {
+  protected updateWork(updatedWorkList: IWork[]) {
     this.work = updatedWorkList;
   }
 
   ngOnDestroy() {
     this.work = [];
-    this.listSubscription.unsubscribe();
+    // this.listSubscription.unsubscribe();
   }
 }
