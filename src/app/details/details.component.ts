@@ -15,7 +15,7 @@ const OVERLAY_CLASS = 'nls-overlay';
 })
 export class DetailsComponent implements OnInit, OnDestroy {
 
-  // protected listSubscription: Subscription;
+  protected itemSubscription: Subscription;
   protected urlSubscription: Subscription;
   protected url: UrlSegment[];
   protected work: IWork[];
@@ -28,33 +28,41 @@ export class DetailsComponent implements OnInit, OnDestroy {
     private router: Router,
     private workService: WorkService
   ) {
-    // this.listSubscription = this.workService.listSingleItems().subscribe(res => this.work = res);
-    this.urlSubscription = route.url.subscribe((u) => this.url = u);
+    this.urlSubscription = route.url.subscribe(url => this.subsribeItem(url));
     this.currentIndex = 0;
   }
 
   ngOnInit() {
     document.body.classList.add(OVERLAY_CLASS);
 
-    if (!this.findItem()) {
-      return this.close();
-    } else {
-      this.defineCurrentPicture(1);
-    }
+    // if (!this.findItem()) {
+    //   return this.close();
+    // } else {
+    //   this.defineCurrentPicture(1);
+    // }
   }
 
   ngOnDestroy() {
     document.body.classList.remove(OVERLAY_CLASS);
-    // this.listSubscription.unsubscribe();
+    // this.itemSubscription.unsubscribe();
   }
 
-  protected findItem() {
-    this.item = this.work.find((item: IWorkItem) => {
-      return item.fullPath === this.url.join('/');
+  protected subsribeItem(url: UrlSegment[]) {
+    const path = url.join('/');
+
+    this.itemSubscription = this.workService.item(path).subscribe(res => {
+      console.log(res);
+      // this.item = res;
     });
-
-    return this.item;
   }
+
+  // protected findItem() {
+  //   this.item = this.work.find((item: IWorkItem) => {
+  //     return item.fullPath === this.url.join('/');
+  //   });
+
+  //   return this.item;
+  // }
 
   protected defineCurrentPicture(index: number) {
     const picturesLength = this.item.pictures.length;

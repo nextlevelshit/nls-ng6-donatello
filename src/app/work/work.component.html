@@ -13,7 +13,7 @@
       {{category.title}}
     </h2>
   </header>
-  <div class="row">
+  <div class="row" *ngIf="category">
     <a class="card col-12 col-sm-2 col-md-3 mb-4" [routerLink]="[{outlets: {details: item.fullPath}}]" *ngFor="let item of category.items">
       <figure class="mb-0">
         <img class="card-img-top" *ngIf="item.pictures.length > 0" [src]="item.pictures[0].fullPath" [alt]="item.pictures.alt">

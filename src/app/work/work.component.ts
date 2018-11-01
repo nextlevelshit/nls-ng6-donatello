@@ -12,8 +12,7 @@ import { WorkService } from './work.service';
 })
 export class WorkComponent implements OnDestroy {
 
-  protected work: any;
-  // protected work: Work[];
+  protected work: IWork[];
   protected listSubscription: Subscription;
 
   constructor(
@@ -21,7 +20,6 @@ export class WorkComponent implements OnDestroy {
     private workService: WorkService
   ) {
     this.listSubscription = this.workService.all().subscribe(res => {
-      console.log('WorkComponent', res);
       this.updateMeta();
       this.updateWork(res);
     });
@@ -60,12 +58,12 @@ export class WorkComponent implements OnDestroy {
     });
   }
 
-  protected updateWork(updatedWorkList: IWork[]) {
+  protected updateWork(updatedWorkList: IWork[]): void {
     this.work = updatedWorkList;
   }
 
   ngOnDestroy() {
     this.work = [];
-    // this.listSubscription.unsubscribe();
+    this.listSubscription.unsubscribe();
   }
 }

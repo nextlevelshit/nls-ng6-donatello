@@ -1,16 +1,16 @@
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-import { Injectable, OnDestroy } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Observable, Subscription } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { environment as env } from './../../environments/environment';
 
-import { Work, WorkItem } from '../model/work';
+import { Work, IWork, WorkItem, IWorkItem } from '../model/work';
 
 @Injectable({
   providedIn: 'root'
 })
-export class  SitemapService implements OnDestroy {
+export class SitemapService {
 
   public sitemap: Observable<any>;
   public subsription: Subscription;
@@ -19,19 +19,6 @@ export class  SitemapService implements OnDestroy {
     private http: HttpClient,
     private router: Router
   ) {
-    // this.sitemap =
-    // this.subsription = this.http.get(env.sitemapUrl, {
-    //   responseType: 'text'
-    // }).subscribe(
-    //   res => {
-    //     this.sitemap = res[env.sitemapIdentifier];
-    //   },
-    //   error => this.router.navigate(['/404'])
-    // );
-  }
-
-  ngOnDestroy() {
-    // this.subsription.unsubscribe();
   }
 
   public all(): Observable<any[]> {
@@ -44,29 +31,35 @@ export class  SitemapService implements OnDestroy {
     );
   }
 
-  public work(): Observable<object[]> {
+  protected raw(): Observable<any[]> {
     return this.http.get(env.sitemapUrl, {
       responseType: 'text'
     }).pipe(
-      map(res => {
-        const raw = JSON.parse(res)[env.sitemapIdentifier];
+      map(res => JSON.parse(res)[env.sitemapIdentifier])
+    );
+  }
 
+  public work(): Observable<IWork[]> {
+    return this.raw().pipe(
+      map(raw => {
         try {
           return new Work(raw).parse();
         } catch (err) {
           return null;
         }
-        // return new Work();
       })
     );
   }
 
-  // public trySearch(query: string) {
-  //   try {
-  //     console.log(this.sitemap, query);
-  //     return search(this.sitemap, query);
-  //   } catch (err) {
-  //     console.log(err);
-  //   }
-  // }
+  public item(path: string): Observable<IWorkItem> {
+    return this.raw().pipe(
+      map(raw => {
+        try {
+          // return new WorkItem(raw, path).parse();
+        } catch (err) {
+          return null;
+        }
+      })
+    );
+  }
 }

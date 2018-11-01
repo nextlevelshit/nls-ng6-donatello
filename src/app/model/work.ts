@@ -2,74 +2,95 @@ import { map } from 'rxjs/operators';
 import { search } from 'nls-directree-searchonly';
 import { environment as env } from './../../environments/environment';
 
+export interface IWork {
+  title: string;
+  relativePath: string;
+  items?: IWorkItem[];
+}
+
+export interface IWorkItem {
+  title: string;
+  information: string[];
+  relativePath: string;
+  fullPath?: string;
+  subTitle?: string;
+  pictures?: IWorkPicture[];
+}
+
+export interface IWorkPicture {
+  fullPath: string;
+  relativePath: string;
+  alt?: string;
+}
+
 export class Work {
   constructor(
     public raw: object
-  ) {
-  }
+  ) {}
+
   parse(): IWork[] {
-    const workList = search(this.raw, 'work');
+    const workList = <any[]>search(this.raw, env.workDir);
 
     return (workList.length)
-    ? workList.map(work => {
-      const path = Object.keys(work)[0];
-      const items = Object.values(work)[0];
+      ? workList.map(work => {
+        const path = <string>Object.keys(work)[0];
+        const items = <any[]>Object.values(work)[0];
 
-      return {
-        title: path.toLocaleUpperCase(),
-        items: items.map(item => new WorkItem(path, item).parse())
-      };
-    })
-    : null;
+        return {
+          relativePath: path,
+          title: path.toLocaleUpperCase(),
+          items: items.map(item => {
+            const parsedWorkItem = new WorkItem(item).parse();
+
+            parsedWorkItem.fullPath = [
+              env.workDir,
+              path,
+              parsedWorkItem.relativePath
+            ].join('/');
+
+            parsedWorkItem.pictures =  parsedWorkItem.pictures.map(picture => {
+              return {
+                ...picture,
+                ...{ fullPath: [env.contentUrl, parsedWorkItem.fullPath, picture.relativePath].join('/') }
+              };
+            });
+
+            return parsedWorkItem;
+          })
+        };
+      })
+      : null;
   }
 }
 
 export class WorkItem {
-  constructor(
-    public work: string,
-    public item: object
-  ) {
-  }
-  parse(): IWorkItem {
+  protected item: IWorkItem;
+  protected path: string;
 
-    const path = Object.keys(this.item)[0];
-    const files = Object.values(this.item)[0];
+  constructor(
+    public raw: any[]
+  ) {
+    this.path = [env.workUrl, Object.keys(this.raw)[0]].join('/');
+  }
+
+  parse(): IWorkItem {
+    const slug = Object.keys(this.raw)[0];
+    const files = Object.values(this.raw)[0];
     const pictures
       = files
         .filter(file => {
         return true;
       }).map(picture => {
         return {
-          fullPath: env.workUrl + this.work + '/' + path + '/' + picture
+          relativePath: picture
         };
       });
 
-    return {
-      title: path.toUpperCase(),
-      fullPath: env.workDir + '/' + this.work + '/' + path,
-      pictures: pictures
+    return  {
+      information: [],
+      pictures: pictures,
+      relativePath: slug,
+      title: slug.toUpperCase(),
     };
   }
-}
-
-export interface IWork {
-  title: string;
-  fullPath?: string; // e.g. work/drawing/
-  relativePath?: string;
-  items?: IWorkItem[];
-}
-
-export interface IWorkItem {
-  title: string;
-  subTitle?: string;
-  fullPath: string;
-  relativePath?: string;
-  information?: string[];
-  pictures?: IWorkPicture[];
-}
-
-export interface IWorkPicture {
-  fullPath: string;
-  relativePath?: string;
-  alt?: string;
 }
