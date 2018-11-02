@@ -1,12 +1,19 @@
-export interface Meta {
+export interface IMetaData {
   title: string;
   keywords?: string[];
   description?: string;
-  headlines?: Headline[];
+  headlines?: IHeadline[];
 }
 
-export interface Headline {
+export interface IHeadline {
   slug: string;
   plain: string;
-  children?: Headline[];
+  children?: IHeadline[];
+}
+
+export class Meta {
+  constructor(
+    path: string
+  ) {
+  }
 }

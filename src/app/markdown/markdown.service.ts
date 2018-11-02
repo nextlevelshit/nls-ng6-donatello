@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import slugify from 'slugify';
 import yaml from 'js-yaml';
 
-import { Meta } from './../model/meta';
+import { IMetaData } from './../model/meta';
 
 @Injectable({
   providedIn: 'root'
@@ -33,8 +33,6 @@ export class MarkdownService {
 
     this.metaRaw = this.lines.slice(0, separatorIndex);
     this.contentRaw = this.lines.slice(separatorIndex + 1, -1);
-
-    console.log(this.lines, separatorIndex);
   }
 
   public get meta() {

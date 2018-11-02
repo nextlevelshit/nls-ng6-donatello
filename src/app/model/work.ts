@@ -28,7 +28,7 @@ export class Work {
     public raw: object
   ) {}
 
-  parse(): IWork[] {
+  all(): IWork[] {
     const workList = <any[]>search(this.raw, env.workDir);
 
     return (workList.length)
@@ -40,7 +40,7 @@ export class Work {
           relativePath: path,
           title: path.toLocaleUpperCase(),
           items: items.map(item => {
-            const parsedWorkItem = new WorkItem(item).parse();
+            const parsedWorkItem = new WorkItem(item).withRaw();
 
             parsedWorkItem.fullPath = [
               env.workDir,
@@ -73,7 +73,18 @@ export class WorkItem {
     this.path = [env.workUrl, Object.keys(this.raw)[0]].join('/');
   }
 
-  parse(): IWorkItem {
+  withPath(path: string): IWorkItem {
+    this.path = path;
+
+    return {
+      information: [],
+      pictures: [],
+      relativePath: '',
+      title: ''.toUpperCase(),
+    };
+  }
+
+  withRaw(): IWorkItem {
     const slug = Object.keys(this.raw)[0];
     const files = Object.values(this.raw)[0];
     const pictures

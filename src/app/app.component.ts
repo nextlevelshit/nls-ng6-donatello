@@ -1,8 +1,8 @@
 import { Component, OnInit, OnDestroy, AfterContentChecked } from '@angular/core';
-import { Meta as DocumentMeta, Title as DocumentTitle } from '@angular/platform-browser';
+import { Meta as DocumentIMeta, Title as DocumentTitle } from '@angular/platform-browser';
 import { Observable, Subscription } from 'rxjs';
 
-import { Meta } from './model/meta';
+import { IMetaData } from './model/meta';
 import { MetaService } from './meta/meta.service';
 
 @Component({
@@ -19,12 +19,12 @@ export class AppComponent implements AfterContentChecked, OnDestroy {
   constructor (
     private metaService: MetaService,
     private docTitle: DocumentTitle,
-    private docMeta: DocumentMeta
+    private docIMeta: DocumentIMeta
   ) {
   }
 
   ngAfterContentChecked() {
-    this.retrieveMeta();
+    this.retrieveIMeta();
     this.currentUrl = window.location.origin + window.location.pathname;
   }
 
@@ -34,30 +34,30 @@ export class AppComponent implements AfterContentChecked, OnDestroy {
     this.urlSubscription.unsubscribe();
   }
 
-  protected retrieveMeta() {
-    this.metaSubscription = this.metaService.retrieve().subscribe((res: Meta) => {
-      this.updateMeta(res);
+  protected retrieveIMeta() {
+    this.metaSubscription = this.metaService.retrieve().subscribe((res: IMetaData) => {
+      this.updateIMeta(res);
     });
   }
 
-  protected updateMeta(recievedMeta: Meta) {
-    if (!recievedMeta) {
+  protected updateIMeta(recievedIMeta: IMetaData) {
+    if (!recievedIMeta) {
       return;
     }
-    // Mandatory Meta Parameters
-    this.docTitle.setTitle(recievedMeta.title);
-    this.docMeta.updateTag({
-      name: 'description', content: recievedMeta.description
+    // Mandatory IMeta Parameters
+    this.docTitle.setTitle(recievedIMeta.title);
+    this.docIMeta.updateTag({
+      name: 'description', content: recievedIMeta.description
     });
-    // Optional Meta Parameters
-    if (recievedMeta.headlines) {
-      this.headlines = recievedMeta.headlines;
+    // Optional IMeta Parameters
+    if (recievedIMeta.headlines) {
+      this.headlines = recievedIMeta.headlines;
     } else {
       this.headlines = [];
     }
-    if (recievedMeta.keywords) {
-      this.docMeta.updateTag({
-        name: 'keywords', content: recievedMeta.keywords.join(',')
+    if (recievedIMeta.keywords) {
+      this.docIMeta.updateTag({
+        name: 'keywords', content: recievedIMeta.keywords.join(',')
       });
     }
   }

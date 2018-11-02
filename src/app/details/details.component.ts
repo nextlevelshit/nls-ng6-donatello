@@ -51,7 +51,7 @@ export class DetailsComponent implements OnInit, OnDestroy {
     const path = url.join('/');
 
     this.itemSubscription = this.workService.item(path).subscribe(res => {
-      console.log(res);
+      console.log(path, res);
       // this.item = res;
     });
   }

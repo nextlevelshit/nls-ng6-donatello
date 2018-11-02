@@ -2,25 +2,25 @@ import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
 
 import { environment as env } from './../../environments/environment';
-import { Meta } from './../model/meta';
+import { IMetaData } from './../model/meta';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MetaService {
 
-  protected meta: Meta;
+  protected meta: IMetaData;
 
   constructor() { }
 
-  public retrieve(): Observable<Meta> {
+  public retrieve(): Observable<IMetaData> {
     return new Observable(observer => {
       observer.next(this.meta);
       observer.complete();
     });
   }
 
-  public update(updatedMeta: Meta): void {
+  public update(updatedMeta: IMetaData): void {
     this.meta = {
       ...env.meta,
       ...updatedMeta

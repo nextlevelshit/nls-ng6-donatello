@@ -3,8 +3,9 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, Subscription } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { environment as env } from './../../environments/environment';
+import { search } from 'nls-directree-searchonly';
 
+import { environment as env } from './../../environments/environment';
 import { Work, IWork, WorkItem, IWorkItem } from '../model/work';
 
 @Injectable({
@@ -43,7 +44,7 @@ export class SitemapService {
     return this.raw().pipe(
       map(raw => {
         try {
-          return new Work(raw).parse();
+          return new Work(raw).all();
         } catch (err) {
           return null;
         }
@@ -55,7 +56,7 @@ export class SitemapService {
     return this.raw().pipe(
       map(raw => {
         try {
-          // return new WorkItem(raw, path).parse();
+          return new WorkItem(raw).withPath(path);
         } catch (err) {
           return null;
         }
