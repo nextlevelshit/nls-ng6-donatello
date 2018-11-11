@@ -10,26 +10,27 @@ export interface IWork {
 
 export interface IWorkItem {
   title: string;
-  information: string[];
   relativePath: string;
+  information?: any[];
   fullPath?: string;
   subTitle?: string;
+  files?: any[];
   pictures?: IWorkPicture[];
 }
 
 export interface IWorkPicture {
   fullPath: string;
-  relativePath: string;
+  relativePath?: string;
   alt?: string;
 }
 
 export class Work {
   constructor(
-    public raw: object
+    public sitemap: object
   ) {}
 
   all(): IWork[] {
-    const workList = <any[]>search(this.raw, env.workDir);
+    const workList = <any[]>search(this.sitemap, env.workDir);
 
     return (workList.length)
       ? workList.map(work => {
@@ -40,6 +41,8 @@ export class Work {
           relativePath: path,
           title: path.toLocaleUpperCase(),
           items: items.map(item => {
+            const searchedItem = search(this.sitemap, env.workDir);
+            console.log('Work.all():item', item, {[path]: items});
             const parsedWorkItem = new WorkItem(item).withRaw();
 
             parsedWorkItem.fullPath = [
@@ -66,42 +69,44 @@ export class Work {
 export class WorkItem {
   protected item: IWorkItem;
   protected path: string;
+  protected slug: any;
+  protected files: any[];
 
   constructor(
-    public raw: any[]
+    public sitemap: any[]
   ) {
-    this.path = [env.workUrl, Object.keys(this.raw)[0]].join('/');
+    this.path = [env.workUrl, Object.keys(this.sitemap)[0]].join('/');
+    this.slug = Object.keys(this.sitemap)[0];
+    this.files = Object.values(this.sitemap)[0];
   }
 
   withPath(path: string): IWorkItem {
     this.path = path;
+    this.sitemap = search(this.sitemap, path);
+    this.slug = this.path.split('/');
+    this.files = this.sitemap;
 
-    return {
-      information: [],
-      pictures: [],
-      relativePath: '',
-      title: ''.toUpperCase(),
-    };
+    return this.withRaw();
   }
 
   withRaw(): IWorkItem {
-    const slug = Object.keys(this.raw)[0];
-    const files = Object.values(this.raw)[0];
+    console.log(this.slug, this.sitemap, this.path);
     const pictures
-      = files
+      = this.files
         .filter(file => {
         return true;
-      }).map(picture => {
+      }).map((picture) => {
         return {
           relativePath: picture
         };
       });
 
-    return  {
+    return <IWorkItem> {
+      title: this.slug.toUpperCase(),
+      relativePath: this.slug,
       information: [],
       pictures: pictures,
-      relativePath: slug,
-      title: slug.toUpperCase(),
+      files: this.files
     };
   }
 }

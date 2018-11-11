@@ -9,6 +9,8 @@ import { SitemapService } from './../sitemap/sitemap.service';
 })
 export class WorkService {
 
+  protected indexFile: string;
+  protected raw: any;
   protected sitemapSubscription: Subscription;
   public work: IWork[];
   public sitemap: any[];
@@ -24,5 +26,13 @@ export class WorkService {
 
   public item(path: string): Observable<IWorkItem> {
     return this.sitemapService.item(path);
+  }
+
+  protected filterMeta() {
+    return;
+  }
+
+  protected filterPictures() {
+    return;
   }
 }
