@@ -1,6 +1,8 @@
-export interface FileElement {
-  id?: string;
-  isFolder: boolean;
-  name: string;
-  parent: string;
+export interface IFile {
+  title: string;
+
+}
+
+export interface IDirectory {
+  title: string;
 }

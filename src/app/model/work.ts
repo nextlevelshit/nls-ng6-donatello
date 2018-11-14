@@ -42,7 +42,7 @@ export class Work {
           title: path.toLocaleUpperCase(),
           items: items.map(item => {
             const searchedItem = search(this.sitemap, env.workDir);
-            console.log('Work.all():item', item, {[path]: items});
+            // console.log('Work.all():item', item, {[path]: items});
             const parsedWorkItem = new WorkItem(item).withRaw();
 
             parsedWorkItem.fullPath = [
@@ -90,7 +90,7 @@ export class WorkItem {
   }
 
   withRaw(): IWorkItem {
-    console.log(this.slug, this.sitemap, this.path);
+    // console.log(this.slug, this.sitemap, this.path);
     const pictures
       = this.files
         .filter(file => {

@@ -20,6 +20,8 @@ export class WorkComponent implements OnDestroy {
     private workService: WorkService
   ) {
     this.listSubscription = this.workService.all().subscribe(res => {
+      console.log('WorkComponent.constructor()', res);
+
       this.updateMeta();
       this.updateWork(res);
     });
