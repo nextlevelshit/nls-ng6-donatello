@@ -18,13 +18,15 @@ export class Directory implements Deserializable  {
    */
   deserialize(input: any) {
     Object.assign(this, {
-      relativePath: Object.keys(input)[0]
+      relativePath: Object.keys(input)[0],
+      children: Object.values(input)[0]
     });
     return this;
   }
 }
 export interface IDirectory {
   relativePath: string;
+  children?: IFile|IDirectory|IWork|IWorkItem|IPage|IPicture;
 }
 
 /**
@@ -130,9 +132,6 @@ export class Page extends File {
    */
   deserialize(input: any) {
     Object.assign(this, input);
-    this.headlines = input.pictures.map(item => {
-      return new Headline().deserialize(item);
-    });
     return this;
   }
 }
