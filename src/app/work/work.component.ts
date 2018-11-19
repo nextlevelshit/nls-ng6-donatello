@@ -20,8 +20,6 @@ export class WorkComponent implements OnDestroy {
     private workService: WorkService
   ) {
     this.workSubscription = this.workService.subscribeWork().subscribe(res => {
-      // console.log('WorkComponent.constructor()', res);
-
       this.updateMeta();
       this.work = res;
     });
@@ -45,16 +43,14 @@ export class WorkComponent implements OnDestroy {
         {
           slug: 'work',
           plain: 'Work',
-          children: [
-            {
-              slug: 'sculpture',
-              plain: 'Skulpturen'
-            },
-            {
-              slug: 'drawing',
-              plain: 'Zeichnung'
-            }
-          ]
+        },
+        {
+          slug: 'sculpture',
+          plain: 'Skulpturen'
+        },
+        {
+          slug: 'drawing',
+          plain: 'Zeichnung'
         }
       ]
     });

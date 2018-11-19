@@ -1,7 +1,7 @@
 h1, h2, h3,
 .h1, .h2, .h3 {
   text-transform: uppercase;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0;
 }
 
 .card.shadow {
@@ -15,4 +15,12 @@ h1, h2, h3,
 .jumbotron {
   padding-left: 0;
   padding-right: 0;
+}
+
+.navbar-nav {
+  flex-direction: row !important;
+}
+
+.row {
+  width: 100%;
 }

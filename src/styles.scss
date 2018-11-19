@@ -2,7 +2,6 @@
 @import "styles-variables";
 
 // Bootstrap Reboot
-@import "~bootstrap/scss/mixins";
 @import "~bootstrap/scss/reboot";
 @import "~bootstrap/scss/bootstrap-grid";
 // Bootstrap Components
@@ -19,7 +18,7 @@
 @import "~bootstrap/scss/utilities";
 
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:500,700|Roboto:300,400,400i,500');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500|Roboto:300,400,400i,500');
 
 // Base
 html {
@@ -44,6 +43,13 @@ a {
   }
 }
 
+h1, h2, h3, h4, h5, h6 {
+  &:target {
+    display: block;
+    padding-top: $nls-navbar-height + $spacer;
+  }
+}
+
 // Components
 
 .nls {
@@ -51,6 +57,25 @@ a {
   &-sidebar {
     position: sticky;
     top: $nls-navbar-height;
+
+    &-list {
+      padding: 0;
+
+      &-item {
+        list-style-type: none;
+        margin: 0;
+        padding: .5 * $spacer 0;
+
+        a {
+          display: block;
+          font-size: $font-size-sm;
+          font-weight: 300; //$headings-font-weight;
+          font-family: $headings-font-family;
+          color: $red;
+          text-transform: uppercase;
+        }
+      }
+    }
   }
 
   &-footer {

@@ -2,17 +2,32 @@
 
 .navbar {
 
+  border-bottom: 1px solid $red;
+  box-shadow: 0 0 0.9rem $red;
+
+  &-brand,
+  &-nav .nav-link {
+    text-transform: uppercase;
+    font-family: $headings-font-family;
+    text-shadow: 1px 1px 0 $white;
+  }
+
   &-brand {
     margin: 0;
     line-height: $nls-navbar-brand-line-height;
-    text-transform: uppercase;
-    font-family: $headings-font-family;
-    font-weight: $headings-font-weight;
+    color: $red;
 
     &:hover,
     &:focus,
     &:active {
       text-decoration: none;
+    }
+
+    &-nav {
+
+      @include media-breakpoint-down(sm) {
+        align-items: end;
+      }
     }
   }
 
@@ -21,10 +36,23 @@
 
     .nav-item {
       padding-right: $spacer * 3;
+      padding-left: 0;
+
+      @include media-breakpoint-down(sm) {
+        padding-right: 0;
+        padding-left: $spacer;
+      }
     }
 
     .nav-link {
-      text-transform: uppercase;
+      font-weight: 300; //$headings-font-weight;
+      letter-spacing: 1px;
+      padding-top: 0;
+      padding-bottom: 0;
+
+      @include media-breakpoint-down(sm) {
+        font-size: 80%;
+      }
 
       &:hover,
       &:focus,

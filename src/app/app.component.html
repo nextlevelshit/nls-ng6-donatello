@@ -1,24 +1,20 @@
 <header>
-  <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navigation" aria-controls="main-navigation" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse row flex-xl-nowrap align-items-center" id="main-navigation">
-      <a class="navbar-brand col-12 col-md-3 col-xl-2" routerLink="/">Sarah<br>Esser</a>
-      <div class="col-12 col-md-9 col-xl-10">
+  <nav class="navbar fixed-top navbar-light bg-light">
+    <div class="row flex-nowrap align-items-center">
+      <a class="navbar-brand col-4 col-md-3 col-xl-2" routerLink="/">Sarah<br>Esser</a>
+      <div class="col-8 col-md-9 col-xl-10">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" routerLink="/">Work</a>
+            <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Work</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/page/vita">Vita</a>
+            <a class="nav-link" routerLink="/page/vita" routerLinkActive="active">Vita</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/page/news">News</a>
+            <a class="nav-link" routerLink="/page/news"  routerLinkActive="active">News</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/page/contact">Contact</a>
+            <a class="nav-link" routerLink="/page/contact" routerLinkActive="active">Contact</a>
           </li>
         </ul>
       </div>
@@ -28,7 +24,7 @@
 
 <main class="container-fluid">
   <div class="row flex-xl-nowrap">
-    <section class="col-12 col-md-3 col-xl-2">
+    <section class="col-md-3 col-xl-2 d-md-block d-none">
       <nav class="nls-sidebar pt-3" id="sub-navigation" *ngIf="headlines">
         <nls-recursive-tree [tree]="headlines" [baseHref]="currentUrl"></nls-recursive-tree>
       </nav>
@@ -46,16 +42,20 @@
 <footer class="nls-footer">
   <div class="container-fluid">
     <div class="row">
-      <a class="col-12 col-md-3 col-xl-2" href="https://dailysh.it" target="_blank">
+      <a class="col-6 col-md-3 col-xl-2" href="https://dailysh.it" target="_blank">
         <small class="text-muted">made with ♥</small>
       </a>
-      <div class="col-12 col-md-9 col-xl-10">
-        <ul class="list-inline mb-0 text-muted">
+      <div class="col-6 col-md-9 col-xl-10">
+        <ul class="list-inline mb-0 text-muted text-right">
           <li class="list-inline-item">
-            <a routerLink="/page/imprint">Imprint</a>
+            <a routerLink="/page/imprint">
+              <small class="text-muted">Imprint</small>
+            </a>
           </li>
           <li class="list-inline-item">
-            <a routerLink="/page/disclaimer">Disclaimer</a>
+            <a routerLink="/page/disclaimer">
+              <small class="text-muted">Disclaimer</small>
+            </a>
           </li>
         </ul>
       </div>
