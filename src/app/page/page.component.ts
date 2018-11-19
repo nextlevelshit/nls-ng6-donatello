@@ -42,7 +42,7 @@ export class PageComponent implements OnDestroy {
   }
 
   protected loadPage() {
-    const url = [env.contentUrl, this.slug, '.md'].join('');
+    const url = [env.contentUrl, this.slug + '.md'].join('/');
 
     this.fileSubscription = this.http.get(url, {
       responseType: 'text'
