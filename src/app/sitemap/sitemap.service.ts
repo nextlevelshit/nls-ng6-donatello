@@ -6,7 +6,7 @@ import { map } from 'rxjs/operators';
 import { search } from 'nls-directree-searchonly';
 
 import { environment as env } from './../../environments/environment';
-import { Directory, IDirectory, File, IFile, IWork, IWorkItem, Page, IPage, Picture, IPicture } from './../app.ontology';
+import { Directory, IDirectory, File, IFile, Work, IWorkItem, Page, IPage, Picture, IPicture } from './../app.ontology';
 
 @Injectable({
   providedIn: 'root'
@@ -81,40 +81,43 @@ export class SitemapService {
     );
   }
 
-  protected raw(): Observable<any> {
+  protected retrieve(): Observable<any> {
     return this.http.get(env.sitemapUrl, {
       responseType: 'text'
     }).pipe(
       map(res => {
         const raw = JSON.parse(res)[env.sitemapIdentifier];
-        return this.detach(raw);
+        return raw;
       })
     );
   }
 
   public work(): Observable<any> {
-    return this.raw();
-    // return this.raw().pipe(
-    //   map(raw => {
-    //     try {
-    //       return new Work(raw).all();
-    //     } catch (err) {
-    //       return null;
-    //     }
-    //   })
-    // );
+    return this.retrieve()
+      .pipe(
+        map(raw => {
+          try {
+            const filtered = search(raw, env.workDir);
+            const detached = this.detach(filtered);
+
+            return new Work().deserialize(detached);
+          } catch (err) {
+            return null;
+          }
+        })
+      );
   }
 
   public item(path: string): Observable<any> {
-    return this.raw();
-    // return this.raw().pipe(
-    //   map(raw => {
-    //     try {
-    //       return new WorkItem(raw).withPath(path);
-    //     } catch (err) {
-    //       return null;
-    //     }
-    //   })
-    // );
+    return this.retrieve()
+      .pipe(
+        map(raw => {
+          try {
+            return this.detach(search(raw, path));
+          } catch (err) {
+            return null;
+          }
+        })
+      );
   }
 }

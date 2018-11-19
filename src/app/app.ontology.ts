@@ -1,9 +1,12 @@
+import { environment as env } from './../environments/environment';
+
 /**
  * Deserializable Interface.
  * @implements Deserializable
  */
 export interface Deserializable {
   deserialize(input: any): this;
+  mergePath(parent: string, self: IDirectory): string;
 }
 
 /**
@@ -12,21 +15,27 @@ export interface Deserializable {
  */
 export class Directory implements Deserializable  {
   relativePath: string;
+  fullPath?: string;
+  children?: (IFile|IDirectory|IWorkCategory|IWorkItem|IPage|IPicture)[];
   /**
    * Assign input to this argument.
    * @returns Directory
    */
-  deserialize(input: any) {
+  deserialize(input: any, path = '') {
     Object.assign(this, {
       relativePath: Object.keys(input)[0],
       children: Object.values(input)[0]
     });
     return this;
   }
+
+  mergePath(parent: any): string {
+    return [parent.relativePath, this.relativePath].join('/');
+  }
 }
 export interface IDirectory {
   relativePath: string;
-  children?: IFile|IDirectory|IWork|IWorkItem|IPage|IPicture;
+  children?: (IFile|IDirectory|IWorkCategory|IWorkItem|IPage|IPicture)[];
 }
 
 /**
@@ -34,25 +43,45 @@ export interface IDirectory {
  * @extends Directory
  */
 export class Work extends Directory {
+  /**
+   * Assign input to this argument and iterate through
+   * work directories.
+   * @returns Directory
+   */
+  deserialize(directories: any) {
+    this.relativePath = env.workDir;
+    this.children = directories.map(directory => {
+      return new WorkCategory().deserialize(directory, this);
+    });
+    return this;
+  }
+}
+
+/**
+ * Work Category Class built on Directory.
+ * @extends Directory
+ */
+export class WorkCategory extends Directory {
   title?: string;
-  items?: IWorkItem[];
   /**
    * Assign input to this argument and iterate through
    * work items.
    * @returns Directory
    */
-  deserialize(input: any) {
-    Object.assign(this, input);
-    this.items = input.items.map(item => {
-      return new WorkItem().deserialize(item);
+  deserialize(directory: any, parent: any) {
+    Object.assign(this, directory);
+    this.relativePath = this.mergePath(parent);
+    this.children =  directory.children.map(item => {
+      return new WorkItem().deserialize(item, this);
     });
     return this;
   }
 }
-export interface IWork extends IDirectory {
-  title: string;
-  items: IWorkItem[];
+export interface IWorkCategory extends IDirectory {
+  title?: string;
+  items?: IWorkItem[];
 }
+
 /**
  * WorkItem Class built on Directory.
  * @extends Directory
@@ -64,16 +93,17 @@ export class WorkItem extends Directory {
   information: any[];
   fullPath: string;
   subTitle: string;
-  pictures: IPicture[];
   /**
    * Assign input to this argument and parse pictures.
-   * @param input Raw data
+   * @param directory Raw data
    * @returns Directory
    */
-  deserialize(input: any) {
-    Object.assign(this, input);
-    this.pictures = input.pictures.map(item => {
-      return new Picture().deserialize(item);
+  deserialize(directory: any, parent: any) {
+    Object.assign(this, directory);
+    this.relativePath = this.mergePath(parent);
+    this.children = directory.children.map(child => {
+      child.relativePath = child.mergePath(this);
+      return child;
     });
     return this;
   }
@@ -85,7 +115,6 @@ export interface IWorkItem extends IDirectory {
   information?: any[];
   fullPath?: string;
   subTitle?: string;
-  pictures?: IPicture[];
 }
 
 /**
@@ -107,6 +136,10 @@ export class File implements Deserializable {
       fileName: input
     });
     return this;
+  }
+
+  mergePath(parent: any): string {
+    return [parent.relativePath, this.fileName].join('/');
   }
 }
 
