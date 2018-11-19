@@ -15,7 +15,7 @@ export interface Deserializable {
  */
 export class Directory implements Deserializable  {
   relativePath: string;
-  fullPath: string;
+  absolutePath: string;
   title: string;
   children: (IFile|IDirectory|IWorkCategory|IWorkItem|IPage|IPicture)[];
   /**
@@ -31,7 +31,7 @@ export class Directory implements Deserializable  {
   }
 
   mergePath(parent: any): string {
-    return [parent.fullPath, this.relativePath].join('/');
+    return [parent.absolutePath, this.relativePath].join('/');
   }
   /**
    * Merge existing title into human readabible slug.
@@ -49,7 +49,7 @@ export class Directory implements Deserializable  {
 }
 export interface IDirectory {
   relativePath: string;
-  fullPath?: string;
+  absolutePath?: string;
   title?: string;
   children?: (IFile|IDirectory|IWorkCategory|IWorkItem|IPage|IPicture)[];
 }
@@ -66,7 +66,7 @@ export class Work extends Directory {
    */
   deserialize(directories: any) {
     this.relativePath = env.workDir;
-    this.fullPath = this.relativePath;
+    this.absolutePath = this.relativePath;
     this.children = directories.map(directory => {
       return new WorkCategory().deserialize(directory, this);
     });
@@ -87,7 +87,7 @@ export class WorkCategory extends Directory {
   deserialize(directory: any, parent: any) {
     Object.assign(this, directory);
     this.title = this.relativePath.toString().toUpperCase();
-    this.fullPath = this.mergePath(parent);
+    this.absolutePath = this.mergePath(parent);
     this.children =  directory.children.map(item => {
       return new WorkItem().deserialize(item, this);
     });
@@ -115,7 +115,7 @@ export class WorkItem extends Directory {
    */
   deserialize(directory: any, parent: any) {
     Object.assign(this, directory);
-    this.fullPath = this.mergePath(parent);
+    this.absolutePath = this.mergePath(parent);
     this.children = directory.children
       .filter(child => child instanceof Picture)
       .map(picture => {
@@ -154,11 +154,11 @@ export class File implements Deserializable {
   }
 
   mergePath(parent: any): string {
-    return [parent.fullPath, this.fileName].join('/');
+    return [parent.absolutePath, this.fileName].join('/');
   }
 
   mergeUrl(parent: any): string {
-    return [env.contentUrl, parent.fullPath, this.fileName].join('/');
+    return [env.contentUrl, parent.absolutePath, this.fileName].join('/');
   }
 }
 
