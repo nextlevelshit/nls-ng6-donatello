@@ -101,10 +101,12 @@ export class WorkItem extends Directory {
   deserialize(directory: any, parent: any) {
     Object.assign(this, directory);
     this.relativePath = this.mergePath(parent);
-    this.children = directory.children.map(child => {
-      child.relativePath = child.mergePath(this);
-      return child;
-    });
+    this.children = directory.children
+      .filter(child => child instanceof Picture)
+      .map(picture => {
+        picture.url = picture.mergeUrl(this);
+        return picture;
+      });
     return this;
   }
 }
@@ -140,6 +142,10 @@ export class File implements Deserializable {
 
   mergePath(parent: any): string {
     return [parent.relativePath, this.fileName].join('/');
+  }
+
+  mergeUrl(parent: any): string {
+    return [env.contentUrl, parent.relativePath, this.fileName].join('/');
   }
 }
 

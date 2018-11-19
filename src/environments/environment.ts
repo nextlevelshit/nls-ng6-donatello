@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   contentDir: '',
-  contentUrl: '/content/',
+  contentUrl: '/content',
   workUrl: '/content/work/',
   workDir: 'work',
   sitemapUrl: '/content/sitemap.json',
