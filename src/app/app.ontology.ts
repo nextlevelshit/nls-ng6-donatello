@@ -15,8 +15,9 @@ export interface Deserializable {
  */
 export class Directory implements Deserializable  {
   relativePath: string;
-  fullPath?: string;
-  children?: (IFile|IDirectory|IWorkCategory|IWorkItem|IPage|IPicture)[];
+  fullPath: string;
+  title: string;
+  children: (IFile|IDirectory|IWorkCategory|IWorkItem|IPage|IPicture)[];
   /**
    * Assign input to this argument.
    * @returns Directory
@@ -30,11 +31,26 @@ export class Directory implements Deserializable  {
   }
 
   mergePath(parent: any): string {
-    return [parent.relativePath, this.relativePath].join('/');
+    return [parent.fullPath, this.relativePath].join('/');
+  }
+  /**
+   * Merge existing title into human readabible slug.
+   * @returns string
+   * @copyright https://gist.github.com/mathewbyrne/1280286
+   */
+  mergeSlug(): string {
+    return this.title.toString().toLowerCase()
+      .replace(/\s+/g, '-')           // Replace spaces with -
+      .replace(/[^\w\-]+/g, '')       // Remove all non-word chars
+      .replace(/\-\-+/g, '-')         // Replace multiple - with single -
+      .replace(/^-+/, '')             // Trim - from start of text
+      .replace(/-+$/, '');            // Trim - from end of text
   }
 }
 export interface IDirectory {
   relativePath: string;
+  fullPath?: string;
+  title?: string;
   children?: (IFile|IDirectory|IWorkCategory|IWorkItem|IPage|IPicture)[];
 }
 
@@ -50,6 +66,7 @@ export class Work extends Directory {
    */
   deserialize(directories: any) {
     this.relativePath = env.workDir;
+    this.fullPath = this.relativePath;
     this.children = directories.map(directory => {
       return new WorkCategory().deserialize(directory, this);
     });
@@ -62,7 +79,6 @@ export class Work extends Directory {
  * @extends Directory
  */
 export class WorkCategory extends Directory {
-  title?: string;
   /**
    * Assign input to this argument and iterate through
    * work items.
@@ -70,7 +86,8 @@ export class WorkCategory extends Directory {
    */
   deserialize(directory: any, parent: any) {
     Object.assign(this, directory);
-    this.relativePath = this.mergePath(parent);
+    this.title = this.relativePath.toString().toUpperCase();
+    this.fullPath = this.mergePath(parent);
     this.children =  directory.children.map(item => {
       return new WorkItem().deserialize(item, this);
     });
@@ -87,11 +104,9 @@ export interface IWorkCategory extends IDirectory {
  * @extends Directory
  */
 export class WorkItem extends Directory {
-  title: string;
   parent: string;
   url: string;
   information: any[];
-  fullPath: string;
   subTitle: string;
   /**
    * Assign input to this argument and parse pictures.
@@ -100,7 +115,7 @@ export class WorkItem extends Directory {
    */
   deserialize(directory: any, parent: any) {
     Object.assign(this, directory);
-    this.relativePath = this.mergePath(parent);
+    this.fullPath = this.mergePath(parent);
     this.children = directory.children
       .filter(child => child instanceof Picture)
       .map(picture => {
@@ -111,11 +126,9 @@ export class WorkItem extends Directory {
   }
 }
 export interface IWorkItem extends IDirectory {
-  title: string;
   parent: string;
   url: string;
   information?: any[];
-  fullPath?: string;
   subTitle?: string;
 }
 
@@ -141,11 +154,11 @@ export class File implements Deserializable {
   }
 
   mergePath(parent: any): string {
-    return [parent.relativePath, this.fileName].join('/');
+    return [parent.fullPath, this.fileName].join('/');
   }
 
   mergeUrl(parent: any): string {
-    return [env.contentUrl, parent.relativePath, this.fileName].join('/');
+    return [env.contentUrl, parent.fullPath, this.fileName].join('/');
   }
 }
 
