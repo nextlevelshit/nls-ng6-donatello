@@ -6,10 +6,10 @@
   <p>Unbelievable, but that is my shit!</p>
 </header>
 
-<pre>{{work|json}}</pre>
+<!-- <pre>{{work|json}}</pre> -->
 
-<ng-container  *ngIf="false">
-  <article *ngFor="let category of work">
+<ng-container *ngIf="work">
+  <article *ngFor="let category of work.children">
     <header>
       <h2>
         <a [id]="category.slug" aria-hidden="true"></a>
@@ -17,9 +17,9 @@
       </h2>
     </header>
     <div class="row" *ngIf="category.children">
-      <a class="card col-12 col-sm-2 col-md-3 mb-4" [routerLink]="[{outlets: {details: item.fullPath}}]" *ngFor="let item of category.children">
+      <a class="card col-12 col-sm-2 col-md-3 mb-4" [routerLink]="[{outlets: {details: item.absolutePath}}]" *ngFor="let item of category.children">
         <figure class="mb-0">
-          <img class="card-img-top" *ngIf="item.pictures.length > 0" [src]="item.pictures[0].fullPath" [alt]="item.pictures.alt">
+          <img class="card-img-top" *ngIf="item.children.length" [src]="item.children[0].url" [alt]="item.children.alt">
           <figcaption class="card-body">
             <h5 class="card-title">{{item.title}}</h5>
             <ul class="card-text list-inline mb-0" *ngIf="item.information">

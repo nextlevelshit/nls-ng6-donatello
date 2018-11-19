@@ -116,6 +116,8 @@ export class WorkItem extends Directory {
   deserialize(directory: any, parent: any) {
     Object.assign(this, directory);
     this.absolutePath = this.mergePath(parent);
+    this.information = this.mergeInformation(parent);
+    this.subTitle = this.mergeSubTitle(parent);
     this.children = directory.children
       .filter(child => child instanceof Picture)
       .map(picture => {
@@ -123,6 +125,14 @@ export class WorkItem extends Directory {
         return picture;
       });
     return this;
+  }
+
+  mergeInformation(parent: any): string[] {
+    return ['information', 'information', 'information'];
+  }
+
+  mergeSubTitle(parent: any): string {
+    return 'SUBTITLE';
   }
 }
 export interface IWorkItem extends IDirectory {
