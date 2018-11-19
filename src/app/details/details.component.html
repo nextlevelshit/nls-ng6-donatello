@@ -3,7 +3,7 @@
   <article *ngIf="item">
     <main>
       <figure class="d-flex flex-column justify-content-between align-items-stretch" *ngIf="currentPicture">
-        <img [src]="currentPicture.fullPath" [alt]="currentPicture.alt">
+        <img [src]="currentPicture.url" [alt]="currentPicture.alt">
       </figure>
       <div class="nls-details-action d-flex justify-content-between align-items-stretch" (click)="defineCurrentPicture(currentIndex + 1)">
       </div>
@@ -21,7 +21,7 @@
         <div class="nls-details-indicator d-flex flex-column justify-content-between align-items-center">
           <sup>{{currentIndex}}</sup>
           <span>—</span>
-          <sub>{{item.pictures?.length}}</sub>
+          <sub>{{item.children?.length}}</sub>
         </div>
       </div>
     </footer>

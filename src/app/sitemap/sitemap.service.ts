@@ -6,7 +6,7 @@ import { map } from 'rxjs/operators';
 import { search } from 'nls-directree-searchonly';
 
 import { environment as env } from './../../environments/environment';
-import { Directory, IDirectory, File, IFile, Work, IWorkItem, Page, IPage, Picture, IPicture } from './../app.ontology';
+import { Directory, IDirectory, File, IFile, Work, WorkItem, IWorkItem, Page, IPage, Picture, IPicture } from './../app.ontology';
 
 @Injectable({
   providedIn: 'root'
@@ -97,9 +97,7 @@ export class SitemapService {
       .pipe(
         map(raw => {
           try {
-            const filtered = search(raw, env.workDir);
-            const detached = this.detach(filtered);
-
+            const detached = this.detach(search(raw, env.workDir));
             return new Work().deserialize(detached);
           } catch (err) {
             return null;
@@ -113,7 +111,13 @@ export class SitemapService {
       .pipe(
         map(raw => {
           try {
-            return this.detach(search(raw, path));
+            const detached = {
+              children: this.detach(search(raw, path))
+            };
+            const parent = {
+              absolutePath: path
+            };
+            return new WorkItem().deserialize(detached, parent);
           } catch (err) {
             return null;
           }

@@ -2,7 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router, ActivatedRoute, UrlSegment } from '@angular/router';
 import { Subscription } from 'rxjs';
 
-import { IWork, IWorkItem } from './../model/work';
+import { IDirectory, IWorkItem } from './../app.ontology';
 import { WorkService } from '../work/work.service';
 
 const OVERLAY_CLASS = 'nls-overlay';
@@ -18,7 +18,7 @@ export class DetailsComponent implements OnInit, OnDestroy {
   protected itemSubscription: Subscription;
   protected urlSubscription: Subscription;
   protected url: UrlSegment[];
-  protected work: IWork[];
+  protected work: IDirectory[];
   protected item: IWorkItem;
   public currentPicture: any | null;
   public currentIndex: number;
@@ -38,23 +38,23 @@ export class DetailsComponent implements OnInit, OnDestroy {
     // if (!this.findItem()) {
     //   return this.close();
     // } else {
-    //   this.defineCurrentPicture(1);
+      // this.defineCurrentPicture(1);
     // }
   }
 
   ngOnDestroy() {
     document.body.classList.remove(OVERLAY_CLASS);
-    // this.itemSubscription.unsubscribe();
+    this.itemSubscription.unsubscribe();
   }
 
   protected subsribeItem(url: UrlSegment[]) {
     const path = url.join('/');
 
-    // this.itemSubscription = this.workService.item(path).subscribe(res => {
-    //   // console.log(path, res);
-    //   this.item = res;
-    //   // this.item = res;
-    // });
+    this.itemSubscription = this.workService.subscribeItem(path)
+      .subscribe(res => {
+        this.item = res;
+        this.defineCurrentPicture(1);
+      });
   }
 
   // protected findItem() {
@@ -66,7 +66,8 @@ export class DetailsComponent implements OnInit, OnDestroy {
   // }
 
   protected defineCurrentPicture(index: number) {
-    const picturesLength = this.item.pictures.length;
+    // console.log('DetailsComponent.defineCurrentPicture()', this.item);
+    const picturesLength = this.item.children.length;
 
     if (index > picturesLength) {
       index = 1;
@@ -76,7 +77,7 @@ export class DetailsComponent implements OnInit, OnDestroy {
     }
 
     this.currentIndex = index;
-    this.currentPicture = this.item.pictures[index - 1];
+    this.currentPicture = this.item.children[index - 1];
   }
 
   public close() {

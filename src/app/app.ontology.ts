@@ -115,6 +115,8 @@ export class WorkItem extends Directory {
    */
   deserialize(directory: any, parent: any) {
     Object.assign(this, directory);
+
+    this.parent = parent;
     this.absolutePath = this.mergePath(parent);
     this.information = this.mergeInformation(parent);
     this.subTitle = this.mergeSubTitle(parent);
@@ -124,6 +126,7 @@ export class WorkItem extends Directory {
         picture.url = picture.mergeUrl(this);
         return picture;
       });
+
     return this;
   }
 

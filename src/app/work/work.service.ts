@@ -30,7 +30,7 @@ export class WorkService {
     );
   }
 
-  public subscribeItem(path: string): Observable<WorkItem> {
+  public subscribeItem(path: string): Observable<IWorkItem> {
     return this.sitemapService.item(path).pipe(
       map(item => item)
     );
