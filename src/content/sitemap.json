@@ -5,26 +5,945 @@
     "imprint.md",
     "index.md",
     "news.md",
-    "paths.json",
+    "sitemap.json",
     "vita.md",
     {
       "work": [
         {
-          "drawing": [
+          "01_sculpture": [
             {
-              "Z-WV-2018-001": [
-                "Z-WV-2018-001-0.jpeg",
-                "index.md"
+              "WS-Sarah-Esser_WV_1998-001-Erhebungen_und_Einbrueche": [
+                "Sarah-Esser_WV 1998-001-4288x2848 (12).JPG",
+                "Sarah-Esser_WV 1998-001-4288x2848 (22).JPG",
+                "Sarah-Esser_WV 1998-001-4288x2848 (26).JPG",
+                "Sarah-Esser_WV 1998-001-4288x2848 (29).JPG",
+                "Sarah-Esser_WV 1998-001-4288x2848 (32).JPG"
+              ]
+            },
+            {
+              "WS-Sarah-Esser_WV_2000-003-Spine": [
+                "Sarah-Esser_WV 2000-003-4288x2848 (13).JPG",
+                "Sarah-Esser_WV 2000-003-4288x2848 (17).JPG",
+                "Sarah-Esser_WV 2000-003-4288x2848 (21).JPG",
+                "Sarah-Esser_WV 2000-003-4288x2848 (24).JPG",
+                "Sarah-Esser_WV 2000-003-4288x2848 (30).JPG",
+                "Sarah-Esser_WV 2000-003-4288x2848 (49).JPG"
+              ]
+            },
+            {
+              "WS-Sarah-Esser_WV_2001-003-Eheleute_Erfasst_den_Rand_einens_anderen_Koerpers": [
+                "Sarah-Esser_WV 2001-003-4288x2848 (11).JPG",
+                "Sarah-Esser_WV 2001-003-4288x2848 (18).JPG",
+                "Sarah-Esser_WV 2001-003-4288x2848 (19).JPG",
+                "Sarah-Esser_WV 2001-003-4288x2848 (24).JPG"
+              ]
+            },
+            {
+              "WS-Sarah-Esser_WV_2003-005-Einbrueche_Vom_Fluegen_und_stuerzen": [
+                "Sarah-Esser_WV 2003-005-4288x2848-B (14).JPG",
+                "Sarah-Esser_WV 2003-005-4288x2848-B (16).JPG",
+                "Sarah-Esser_WV 2003-005-4288x2848-B (2).JPG"
+              ]
+            },
+            {
+              "WS-Sarah-Esser_WV_2004-003-Beat": [
+                "Sarah-Esser_WV 2004-003-4288x2848 (3)_1.JPG",
+                "Sarah-Esser_WV 2004-003-4288x2848 (5)_1.JPG",
+                "Sarah-Esser_WV 2004-003-4288x2848 (6)_1.JPG",
+                "Sarah-Esser_WV 2004-003-4288x2848 (8)_1.JPG"
+              ]
+            },
+            {
+              "WS-Sarah-Esser_WV_2004-005-Felice_heitere_Materie": [
+                "Sarah-Esser_WV 2004-005-4288x2848 (1).JPG",
+                "Sarah-Esser_WV 2004-005-4288x2848 (13).JPG",
+                "Sarah-Esser_WV 2004-005-4288x2848 (7).JPG"
+              ]
+            },
+            {
+              "WS-Sarah-Esser_WV_2005-002-Bursa": [
+                "Sarah-Esser_WV 2005-002-4288x2848 (12).JPG",
+                "Sarah-Esser_WV 2005-002-4288x2848 (14).JPG",
+                "Sarah-Esser_WV 2005-002-4288x2848 (17).JPG",
+                "Sarah-Esser_WV 2005-002-4288x2848 (9).JPG"
+              ]
+            },
+            {
+              "WS-Sarah-Esser_WV_2005-003-Hachnissini": [
+                "Sarah-Esser_WV 2005-003-4288x2848 (1).JPG",
+                "Sarah-Esser_WV 2005-003-4288x2848 (5).JPG",
+                "Sarah-Esser_WV 2005-003-4288x2848 (8).JPG",
+                "Sarah-Esser_WV 2005-003-4288x2848 (9).JPG"
+              ]
+            },
+            {
+              "WS-Sarah-Esser_WV_2006-002-Conversation": [
+                "Sarah-Esser_WV 2006-002-4288x2848 (16).JPG",
+                "Sarah-Esser_WV 2006-002-4288x2848 (7).JPG"
+              ]
+            },
+            {
+              "WS-Sarah-Esser_WV_2006-003-Mp3_I": [
+                "Sarah-Esser_WV 2006-003-4288x2848 (1).JPG",
+                "Sarah-Esser_WV 2006-003-4288x2848 (5).JPG",
+                "Sarah-Esser_WV 2006-003-4288x2848 (6).JPG"
+              ]
+            },
+            {
+              "WS-Sarah-Esser_WV_2006-004-Mp3_II": [
+                "Sarah-Esser_WV 2006-004-4288x2848 (4).JPG",
+                "Sarah-Esser_WV 2006-004-4288x2848 (5).JPG",
+                "Sarah-Esser_WV 2006-004-4288x2848 (7).JPG"
+              ]
+            },
+            {
+              "WS-Sarah-Esser_WV_2007-001-Jardin_projete": [
+                "Sarah-Esser_WV 2007-001-4288x2848  (10).JPG",
+                "Sarah-Esser_WV 2007-001-4288x2848  (6).JPG"
+              ]
+            },
+            {
+              "WS-Sarah-Esser_WV_2007-007-Secret_vert": [
+                "Sarah-Esser_WV 2007-007-4288x2848 (1).JPG",
+                "Sarah-Esser_WV 2007-007-4288x2848 (11).JPG",
+                "Sarah-Esser_WV 2007-007-4288x2848 (28).JPG"
+              ]
+            },
+            {
+              "WS-Sarah-Esser_WV_2007-009-Tobias-anima_agitatio": [
+                "Sarah-Esser_WV 2007-009-4288x2848 (19).JPG",
+                "Sarah-Esser_WV 2007-009-4288x2848 (22).JPG",
+                "Sarah-Esser_WV 2007-009-4288x2848 (22)_1.JPG",
+                "Sarah-Esser_WV 2007-009-4288x2848 (36).JPG",
+                "Sarah-Esser_WV 2007-009-4288x2848 (42).JPG"
+              ]
+            },
+            {
+              "WS-Sarah-Esser_WV_2007-011-Isola": [
+                "Sarah-Esser_WV 2007-011-4288x2848  (17).JPG",
+                "Sarah-Esser_WV 2007-011-4288x2848  (9).JPG"
+              ]
+            },
+            {
+              "WS-Sarah-Esser_WV_2007-012-Continental_summer": [
+                "Sarah-Esser_WV 2007-012-4288x2848 (5).jpg"
+              ]
+            },
+            {
+              "WS-Sarah-Esser_WV_2008-002-Not_tint_thy_mind": [
+                "Sarah-Esser_WV 2008-002-4288x2848  (119).JPG",
+                "Sarah-Esser_WV 2008-002-4288x2848  (125).JPG",
+                "Sarah-Esser_WV 2008-002-4288x2848  (137).JPG",
+                "Sarah-Esser_WV 2008-002-4288x2848  (138).JPG",
+                "Sarah-Esser_WV 2008-002-4288x2848  (95).JPG"
+              ]
+            },
+            {
+              "WS-Sarah-Esser_WV_2008-005-Fruehstueck": [
+                "Sarah-Esser_WV 2008-005-4288x2848 (33)_1.JPG",
+                "Sarah-Esser_WV 2008-005-4288x2848 (45)_1.JPG"
+              ]
+            },
+            {
+              "WS-Sarah-Esser_WV_2009-001-CPR": [
+                "Sarah-Esser_WV 2009-001-4288x2848 (6).JPG",
+                "Sarah-Esser_WV 2009-001-4288x2848 (7).JPG"
+              ]
+            },
+            {
+              "WS-Sarah-Esser_WV_2009-006-Ecce_homo": [
+                "Sarah-Esser_WV 2009-006-4288x2848 (12).JPG",
+                "Sarah-Esser_WV 2009-006-4288x2848 (16).JPG",
+                "Sarah-Esser_WV 2009-006-4288x2848 (17).JPG",
+                "Sarah-Esser_WV 2009-006-4288x2848 (5).JPG",
+                "Sarah-Esser_WV 2009-006-4288x2848 (6).JPG"
+              ]
+            },
+            {
+              "WS-Sarah-Esser_WV_2010-003-Adamah": [
+                "Sarah-Esser_WV 2010-003-4288x2848 (25).JPG",
+                "Sarah-Esser_WV 2010-003-4288x2848 (34).jpg",
+                "Sarah-Esser_WV 2010-003-4288x2848 (37).jpg",
+                "Sarah-Esser_WV 2010-003-4288x2848 (38).jpg",
+                "Sarah-Esser_WV 2010-003-4288x2848 (40).jpg",
+                "Sarah-Esser_WV 2010-003-4288x2848 (43).jpg"
+              ]
+            },
+            {
+              "WS-Sarah-Esser_WV_2011-002-Astbrecher": [
+                "Sarah-Esser_WV 2011-002-4288x2848 (3)_1.JPG"
+              ]
+            },
+            {
+              "WS-Sarah-Esser_WV_2011-003-Aktaion": [
+                "Sarah-Esser_WV 2011-003-4288x2848 (16).JPG",
+                "Sarah-Esser_WV 2011-003-4288x2848 (3).JPG",
+                "Sarah-Esser_WV 2011-003-4288x2848 (9).JPG"
+              ]
+            },
+            {
+              "WS-Sarah-Esser_WV_2011-005-Nemo_darf": [
+                "Sarah-Esser_WV 2011-005-4288x2848 (13).JPG",
+                "Sarah-Esser_WV 2011-005-4288x2848 (13)_1.JPG",
+                "Sarah-Esser_WV 2011-005-4288x2848 (3).JPG"
+              ]
+            },
+            {
+              "WS-Sarah-Esser_WV_2012-001-Yurodivaya": [
+                "Sarah-Esser_WV 2012-001-4288x2848  (1).JPG",
+                "Sarah-Esser_WV 2012-001-4288x2848  (2).JPG",
+                "Sarah-Esser_WV 2012-001-4288x2848  (3).JPG",
+                "Sarah-Esser_WV 2012-001-4288x2848  (44).JPG",
+                "Sarah-Esser_WV 2012-001-4288x2848  (57).JPG",
+                "Sarah-Esser_WV 2012-001-4288x2848  (59).JPG",
+                "Sarah-Esser_WV 2012-001-4288x2848  (6).JPG"
+              ]
+            },
+            {
+              "WS-Sarah-Esser_WV_2012-005-Ellipse_der_Eitelkeiten_III": [
+                "Sarah-Esser_WV 2012-005-4288x2848 (2)_1.JPG"
+              ]
+            },
+            {
+              "WS-Sarah-Esser_WV_2012-006-Ellipse_der_Eitelkeiten_IV": [
+                "Sarah-Esser_WV 2012-006-4288x2848 (3)_1.JPG"
+              ]
+            },
+            {
+              "WS-Sarah-Esser_WV_2013-003-George": [
+                "Sarah-Esser_WV 2013-003-4288x2848 (11).JPG",
+                "Sarah-Esser_WV 2013-003-4288x2848 (3).JPG",
+                "Sarah-Esser_WV 2013-003-4288x2848 (7).JPG"
+              ]
+            },
+            {
+              "WS-Sarah-Esser_WV_2013-005-Engonasin": [
+                "Sarah-Esser_WV 2013-005-4288x2848 (1).tif"
+              ]
+            },
+            {
+              "WS-Sarah-Esser_WV_2014-003-Nachtschwimmer": [
+                "Sarah-Esser_WV 2014-003-4288x2848 (3).JPG",
+                "Sarah-Esser_WV 2014-003-4288x2848 (9).JPG"
+              ]
+            },
+            {
+              "WS-Sarah-Esser_WV_2014-006-Rankemensch": [
+                "Sarah-Esser_WV 2014-006-4288x2848 (12).JPG",
+                "Sarah-Esser_WV 2014-006-4288x2848 (3).JPG",
+                "Sarah-Esser_WV 2014-006-4288x2848 (9).JPG"
+              ]
+            },
+            {
+              "WS-Sarah-Esser_WV_2014-007-Ellipse_Linien_I": [
+                "Sarah-Esser_WV 2014-007-4288x2848.jpg"
+              ]
+            },
+            {
+              "WS-Sarah-Esser_WV_2014-008-Ellipse_Linien_II": [
+                "Sarah-Esser_WV 2014-008-4288x2848.jpg"
+              ]
+            },
+            {
+              "WS-Sarah-Esser_WV_2014-009-Er_sei_nicht_nur_Sein_sondern_Werden": [
+                "Sarah-Esser_WV 2014-009-4288x2848 (10).JPG",
+                "Sarah-Esser_WV 2014-009-4288x2848 (14).JPG",
+                "Sarah-Esser_WV 2014-009-4288x2848 (16).JPG",
+                "Sarah-Esser_WV 2014-009-4288x2848 (20).JPG",
+                "Sarah-Esser_WV 2014-009-4288x2848 (24).JPG",
+                "Sarah-Esser_WV 2014-009-4288x2848 (27).JPG"
+              ]
+            },
+            {
+              "WS-Sarah-Esser_WV_2014-013-Narziss_taucht_wieder_auf": [
+                "Sarah-Esser_WV 2014-013-4288x2848 (16).JPG",
+                "Sarah-Esser_WV 2014-013-4288x2848 (24).JPG",
+                "Sarah-Esser_WV 2014-013-4288x2848 (5).JPG",
+                "Sarah-Esser_WV 2014-013-4288x2848 (7).JPG"
+              ]
+            },
+            {
+              "WS-Sarah-Esser_WV_2015-001-Homme_au_Pieds_dargile": [
+                "Sarah-Esser_WV 2015-001-4288x2848 (15).JPG",
+                "Sarah-Esser_WV 2015-001-4288x2848 (21).JPG",
+                "Sarah-Esser_WV 2015-001-4288x2848 (26).JPG",
+                "Sarah-Esser_WV 2015-001-4288x2848 (5).JPG"
+              ]
+            },
+            {
+              "WS-Sarah-Esser_WV_2015-002-Melencolia_I": [
+                "Sarah-Esser_WV 2015-002-4288x2848 (16).JPG",
+                "Sarah-Esser_WV 2015-002-4288x2848 (20).JPG",
+                "Sarah-Esser_WV 2015-002-4288x2848 (28).JPG"
+              ]
+            },
+            {
+              "WS-Sarah-Esser_WV_2015-004-Gedankenlinien": [
+                "Sarah-Esser_WV 2015-004-4288x2848  (3).JPG",
+                "Sarah-Esser_WV 2015-004-4288x2848  (7).JPG"
+              ]
+            },
+            {
+              "WS-Sarah-Esser_WV_2015-005-Sarang_Das_Glueck_der_Selle_ist_hier_tief_in_den_Koerper_eingelagert": [
+                "Sarah-Esser_WV 2015-005-4288x2848 (10).JPG",
+                "Sarah-Esser_WV 2015-005-4288x2848 (19).JPG",
+                "Sarah-Esser_WV 2015-005-4288x2848 (2).JPG",
+                "Sarah-Esser_WV 2015-005-4288x2848 (22).JPG",
+                "Sarah-Esser_WV 2015-005-4288x2848 (7).JPG"
+              ]
+            },
+            {
+              "WS-Sarah-Esser_WV_2015-007-Homeless_glaubt_seiner_epoche_nicht": [
+                "Sarah-Esser_WV 2015-007-4288x2848 (13).JPG",
+                "Sarah-Esser_WV 2015-007-4288x2848 (15).JPG",
+                "Sarah-Esser_WV 2015-007-4288x2848 (15)_1.JPG",
+                "Sarah-Esser_WV 2015-007-4288x2848 (22).JPG",
+                "Sarah-Esser_WV 2015-007-4288x2848 (3).JPG"
+              ]
+            },
+            {
+              "WS-Sarah-Esser_WV_2015-008-Roter_Kopf": [
+                "Sarah-Esser_WV 2015-008-4288x2848  (2).JPG",
+                "Sarah-Esser_WV 2015-008-4288x2848  (7).JPG"
+              ]
+            },
+            {
+              "WS-Sarah-Esser_WV_2016-001-Sleeping_God": [
+                "Sarah-Esser_WV 2016-001-4288x2848 (11).JPG",
+                "Sarah-Esser_WV 2016-001-4288x2848 (12).JPG",
+                "Sarah-Esser_WV 2016-001-4288x2848 (20).JPG",
+                "Sarah-Esser_WV 2016-001-4288x2848 (3).JPG"
+              ]
+            },
+            {
+              "WS-Sarah-Esser_WV_2016-003-Morosoph_Dummweiser": [
+                "Sarah-Esser_WV 2016-003-4288x2848 (3).JPG",
+                "Sarah-Esser_WV 2016-003-4288x2848 (8).JPG"
+              ]
+            },
+            {
+              "WS-Sarah-Esser_WV_2016-004-Holy_Fool_I": [
+                "Sarah-Esser_WV 2016-004-4288x2848 (4).JPG",
+                "Sarah-Esser_WV 2016-004-4288x2848 (6).JPG"
+              ]
+            },
+            {
+              "WS-Sarah-Esser_WV_2016-006-Doppelleibigkeit": [
+                "Sarah-Esser_WV 2016-006-4288x2848 (18).JPG",
+                "Sarah-Esser_WV 2016-006-4288x2848 (23).JPG",
+                "Sarah-Esser_WV 2016-006-4288x2848 (25).JPG",
+                "Sarah-Esser_WV 2016-006-4288x2848 (27).JPG",
+                "Sarah-Esser_WV 2016-006-4288x2848 (30).JPG",
+                "Sarah-Esser_WV 2016-006-4288x2848 (7)_1.JPG"
+              ]
+            },
+            {
+              "WS-Sarah-Esser_WV_2016-008-Traum_in_der_werdenden_Welt_ist_fuer_unbeteiligte_dritte_kein_Platz": [
+                "Sarah-Esser_WV 2016-008-4288x2848 (3).JPG",
+                "Sarah-Esser_WV 2016-008-4288x2848 (9).JPG"
+              ]
+            },
+            {
+              "WS-Sarah-Esser_WV_2016-010-Gaehnschreier_Sperrangelweit_geoeffnetes_Tor_ins_Koerperinnere": [
+                "Sarah-Esser_WV 2016-010-4288x2848 (12).JPG",
+                "Sarah-Esser_WV 2016-010-4288x2848 (3).JPG",
+                "Sarah-Esser_WV 2016-010-4288x2848 (4).JPG",
+                "Sarah-Esser_WV 2016-010-4288x2848 (8).JPG"
+              ]
+            },
+            {
+              "WS-Sarah-Esser_WV_2016-013-Skomorokh": [
+                "Sarah-Esser_WV 2016-013-4288x2848 (1).JPG",
+                "Sarah-Esser_WV 2016-013-4288x2848 (12).JPG",
+                "Sarah-Esser_WV 2016-013-4288x2848 (13).JPG",
+                "Sarah-Esser_WV 2016-013-4288x2848 (18).JPG",
+                "Sarah-Esser_WV 2016-013-4288x2848 (2).JPG",
+                "Sarah-Esser_WV 2016-013-4288x2848 (9).JPG"
+              ]
+            },
+            {
+              "WS-Sarah-Esser_WV_2017-001-Nach_unten_und_mit_der_Innenseite_nach_außen": [
+                "Sarah-Esser_WV 2017-001-4288x2848 (2).JPG",
+                "Sarah-Esser_WV 2017-001-4288x2848 (4).JPG",
+                "Sarah-Esser_WV 2017-001-4288x2848 (6).JPG"
+              ]
+            },
+            {
+              "WS-Sarah-Esser_WV_2017-002-Widersetzlichkeit": [
+                "Sarah-Esser_WV 2017-002-4288x2848 (13).JPG",
+                "Sarah-Esser_WV 2017-002-4288x2848 (4).JPG",
+                "Sarah-Esser_WV 2017-002-4288x2848 (8).JPG"
+              ]
+            },
+            {
+              "WS-Sarah-Esser_WV_2017-003-Fin_folie_Zwiespaeltig": [
+                "Sarah-Esser_WV 2017-003-4288x2848 (1).JPG",
+                "Sarah-Esser_WV 2017-003-4288x2848 (23).JPG",
+                "Sarah-Esser_WV 2017-003-4288x2848 (24).JPG",
+                "Sarah-Esser_WV 2017-003-4288x2848 (5).JPG",
+                "Sarah-Esser_WV 2017-003-4288x2848 (9).JPG"
+              ]
+            },
+            {
+              "WS-Sarah-Esser_WV_2018-002-Erschuetterung_der_Hirnsubstanz_II": [
+                "Sarah-Esser_WV 2018-002-4288x2848 (10).JPG",
+                "Sarah-Esser_WV 2018-002-4288x2848 (16).JPG"
+              ]
+            },
+            {
+              "WS-Sarah_Esser_WV_2000-004-Alfons": [
+                "Sarah-Esser_WV 2000-004-4288x2848 (10).JPG",
+                "Sarah-Esser_WV 2000-004-4288x2848 (17)_1.JPG",
+                "Sarah-Esser_WV 2000-004-4288x2848 (8).JPG"
+              ]
+            },
+            {
+              "WS-Sarah_Esser_WV_2006-008-A_lAffut": [
+                "Sarah Esser_WV 2006-008 (11).JPG",
+                "Sarah Esser_WV 2006-008 (3).JPG",
+                "Sarah Esser_WV 2006-008 (4).JPG",
+                "Sarah Esser_WV 2006-008 (5).JPG",
+                "Sarah Esser_WV 2006-008 (8).JPG",
+                "Sarah Esser_WV 2006-008 (9).JPG"
+              ]
+            },
+            "WS_SCP_data.csv"
+          ]
+        },
+        {
+          "02_drawing": [
+            {
+              "Drawings_data": [
+                "Drawings_data.csv"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2008-001": [
+                "Sarah-Esser_WV-DWG_2008-001.jpg"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2008-002": [
+                "Sarah-Esser_WV-DWG_2008-002.jpg"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2009-001": [
+                "Sarah-Esser_WV-DWG_2009-001.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2009-002": [
+                "Sarah-Esser_WV-DWG_2009-002.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2010-001": [
+                "Sarah-Esser_WV-DWG_2010-001.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2010-002": [
+                "Sarah-Esser_WV-DWG_2010-002.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2010-003": [
+                "Sarah-Esser_WV-DWG_2010-003.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2011-001": [
+                "Sarah-Esser_WV-DWG_2011-001.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2011-002": [
+                "Sarah-Esser_WV-DWG_2011-002.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2012-001": [
+                "Sarah-Esser_WV-DWG_2012-001.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2012-002": [
+                "Sarah-Esser_WV-DWG_2012-002.jpg"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2012-003": [
+                "Sarah-Esser_WV-DWG_2012-003.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2012-004": [
+                "Sarah-Esser_WV-DWG_2012-004.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2013-001": [
+                "Sarah-Esser_WV-DWG_2013-001.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2013-002": [
+                "Sarah-Esser_WV-DWG_2013-002.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2013-003": [
+                "Sarah-Esser_WV-DWG_2013-003.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2013-004": [
+                "Sarah-Esser_WV-DWG_2013-004.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2014-001": [
+                "Sarah-Esser_WV-DWG_2014-001.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2014-002": [
+                "Sarah-Esser_WV-DWG_2014-002.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2014-003": [
+                "Sarah-Esser_WV-DWG_2014-003.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2014-004": [
+                "Sarah-Esser_WV-DWG_2014-004.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2015-001": [
+                "Sarah-Esser_WV-DWG_2015-001.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2015-002": [
+                "Sarah-Esser_WV-DWG_2015-002.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2015-003": [
+                "Sarah-Esser_WV-DWG_2015-003.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2015-004": [
+                "Sarah-Esser_WV-DWG_2015-004.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2015-005": [
+                "Sarah-Esser_WV-DWG_2015-005.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2015-006": [
+                "Sarah-Esser_WV-DWG_2015-006.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2015-007": [
+                "Sarah-Esser_WV-DWG_2015-007.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2015-008": [
+                "Sarah-Esser_WV-DWG_2015-008.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2015-009": [
+                "Sarah-Esser_WV-DWG_2015-009.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2015-010": [
+                "Sarah-Esser_WV-DWG_2015-010.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2015-011": [
+                "Sarah-Esser_WV-DWG_2015-011.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2015-012": [
+                "Sarah-Esser_WV-DWG_2015-012.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2015-013": [
+                "Sarah-Esser_WV-DWG_2015-013.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2015-014": [
+                "Sarah-Esser_WV-DWG_2015-014.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2015-015": [
+                "Sarah-Esser_WV-DWG_2015-015.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2015-016": [
+                "Sarah-Esser_WV-DWG_2015-016.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2015-17": [
+                "Sarah-Esser_WV-DWG_2015-17.jpg"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2016-001": [
+                "Sarah-Esser_WV-DWG_2016-001.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2016-002": [
+                "Sarah-Esser_WV-DWG_2016-002.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2016-003": [
+                "Sarah-Esser_WV-DWG_2016-003.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2016-004": [
+                "Sarah-Esser_WV-DWG_2016-004.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2016-005": [
+                "Sarah-Esser_WV-DWG_2016-005.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2016-006": [
+                "Sarah-Esser_WV-DWG_2016-006.jpg"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2016-007": [
+                "Sarah-Esser_WV-DWG_2016-007.jpg"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2016-008": [
+                "Sarah-Esser_WV-DWG_2016-008.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2016-009": [
+                "Sarah-Esser_WV-DWG_2016-009.jpg"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2016-010": [
+                "Sarah-Esser_WV-DWG_2016-010.jpg"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2016-011": [
+                "Sarah-Esser_WV-DWG_2016-011.jpg"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2016-012": [
+                "Sarah-Esser_WV-DWG_2016-012.jpg"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2016-013": [
+                "Sarah-Esser_WV-DWG_2016-013.jpg"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2017-001": [
+                "Sarah-Esser_WV-DWG_2017-001.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2017-002": [
+                "Sarah-Esser_WV-DWG_2017-002.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2017-003": [
+                "Sarah-Esser_WV-DWG_2017-003.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2017-004": [
+                "Sarah-Esser_WV-DWG_2017-004.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2017-005": [
+                "Sarah-Esser_WV-DWG_2017-005.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2017-006": [
+                "Sarah-Esser_WV-DWG_2017-006.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2017-007": [
+                "Sarah-Esser_WV-DWG_2017-007.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2017-008": [
+                "Sarah-Esser_WV-DWG_2017-008.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2017-009": [
+                "Sarah-Esser_WV-DWG_2017-009.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2018-001": [
+                "Sarah-Esser_WV-DWG_2018-001.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2018-002": [
+                "Sarah-Esser_WV-DWG_2018-002.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2018-003": [
+                "Sarah-Esser_WV-DWG_2018-003.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2018-004": [
+                "Sarah-Esser_WV-DWG_2018-004.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2018-005": [
+                "Sarah-Esser_WV-DWG_2018-005.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2018-006": [
+                "Sarah-Esser_WV-DWG_2018-006.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2018-007": [
+                "Sarah-Esser_WV-DWG_2018-007.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2018-008": [
+                "Sarah-Esser_WV-DWG_2018-008.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2018-009": [
+                "Sarah-Esser_WV-DWG_2018-009.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2018-010": [
+                "Sarah-Esser_WV-DWG_2018-010.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2018-011": [
+                "Sarah-Esser_WV-DWG_2018-011.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2018-012": [
+                "Sarah-Esser_WV-DWG_2018-012.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2018-013": [
+                "Sarah-Esser_WV-DWG_2018-013.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2018-014": [
+                "Sarah-Esser_WV-DWG_2018-014.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2018-015": [
+                "Sarah-Esser_WV-DWG_2018-015.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2018-016": [
+                "Sarah-Esser_WV-DWG_2018-016.jpg"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2018-017": [
+                "Sarah-Esser_WV-DWG_2018-017.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2018-018": [
+                "Sarah-Esser_WV-DWG_2018-018.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-DWG_2018-019": [
+                "Sarah-Esser_WV-DWG_2018-019.JPG"
               ]
             }
           ]
         },
         {
-          "sculpture": [
+          "03_watercolor": [
             {
-              "WV-2016-010": [
-                "WV-2016-010-0.JPG",
-                "index.md"
+              "CLR_data": [
+                "CLR_data.csv"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-CLR_2010-001": [
+                "Sarah-Esser_WV-CLR_2010-001.jpg"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-CLR_2010-002": [
+                "Sarah-Esser_WV-CLR_2010-002.jpg"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-CLR_2010-003": [
+                "Sarah-Esser_WV-CLR_2010-003.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-CLR_2015-001": [
+                "Sarah-Esser_WV-CLR_2015-001.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-CLR_2015-002": [
+                "Sarah-Esser_WV-CLR_2015-002.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-CLR_2015-003": [
+                "Sarah-Esser_WV-CLR_2015-003.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-CLR_2016-001": [
+                "Sarah-Esser_WV-CLR_2016-001.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-CLR_2016-002": [
+                "Sarah-Esser_WV-CLR_2016-002.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-CLR_2016-003": [
+                "Sarah-Esser_WV-CLR_2016-003.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-CLR_2016-004": [
+                "Sarah-Esser_WV-CLR_2016-004.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-CLR_2016-005": [
+                "Sarah-Esser_WV-CLR_2016-005.jpg"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-CLR_2016-006": [
+                "Sarah-Esser_WV-CLR_2016-006.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-CLR_2017-001": [
+                "Sarah-Esser_WV-CLR_2017-001.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-CLR_2017-002": [
+                "Sarah-Esser_WV-CLR_2017-002.jpg"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-CLR_2017-003": [
+                "Sarah-Esser_WV-CLR_2017-003.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-CLR_2017-004": [
+                "Sarah-Esser_WV-CLR_2017-004.jpg"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-CLR_2017-005": [
+                "Sarah-Esser_WV-CLR_2017-005.jpg"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-CLR_2017-006": [
+                "Sarah-Esser_WV-CLR_2017-006.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-CLR_2017-007": [
+                "Sarah-Esser_WV-CLR_2017-007.jpg"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-CLR_2017-008": [
+                "Sarah-Esser_WV-CLR_2017-008.jpg"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-CLR_2017-009": [
+                "Sarah-Esser_WV-CLR_2017-009.jpg"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-CLR_2017-010": [
+                "Sarah-Esser_WV-CLR_2017-010.jpg"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-CLR_2017-011": [
+                "Sarah-Esser_WV-CLR_2017-011.jpg"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-CLR_2018-001": [
+                "Sarah-Esser_WV-CLR_2018-001.JPG"
+              ]
+            },
+            {
+              "Sarah-Esser_WV-CLR_2018-002": [
+                "Sarah-Esser_WV-CLR_2018-002.JPG"
               ]
             }
           ]

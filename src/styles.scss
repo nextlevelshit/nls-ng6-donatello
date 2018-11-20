@@ -46,6 +46,7 @@ a {
 h1, h2, h3, h4, h5, h6 {
   &:target {
     display: block;
+    color: $red;
     padding-top: $nls-navbar-height + $spacer;
   }
 }
@@ -85,6 +86,21 @@ h1, h2, h3, h4, h5, h6 {
     height: $nls-footer-height;
     line-height: $nls-footer-height;
     background-color: $gray-100;
+  }
+}
+
+.card-columns {
+  @include media-breakpoint-only(sm) {
+    column-count: 1;
+  }
+  @include media-breakpoint-only(md) {
+    column-count: 3;
+  }
+  @include media-breakpoint-only(lg) {
+    column-count: 4;
+  }
+  @include media-breakpoint-only(xl) {
+    column-count: 5;
   }
 }
 

@@ -48,6 +48,7 @@
     "karma-jasmine-html-reporter": "^0.2.2",
     "klaw-sync": "^6.0.0",
     "ngx-markdown": "^6.3.0",
+    "nls-directree": "^2.0.0",
     "protractor": "^5.4.1",
     "recursive-readdir": "^2.2.2",
     "slugify": "^1.3.1",

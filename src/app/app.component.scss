@@ -3,7 +3,8 @@
 .navbar {
 
   border-bottom: 1px solid $red;
-  box-shadow: 0 0 0.9rem $red;
+  // border-top: 4px solid $red;
+  // box-shadow: 0 0 0.9rem $red;
 
   &-brand,
   &-nav .nav-link {
@@ -45,7 +46,7 @@
     }
 
     .nav-link {
-      font-weight: 300; //$headings-font-weight;
+      font-weight: 400; //$headings-font-weight;
       letter-spacing: 1px;
       padding-top: 0;
       padding-bottom: 0;

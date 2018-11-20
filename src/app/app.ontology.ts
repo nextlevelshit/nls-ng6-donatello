@@ -1,3 +1,4 @@
+import slugify from 'slugify';
 import { environment as env } from './../environments/environment';
 
 /**
@@ -17,12 +18,12 @@ export class Directory implements Deserializable  {
   relativePath: string;
   absolutePath: string;
   title: string;
-  children: (IFile|IDirectory|IWorkCategory|IWorkItem|IPage|IPicture)[];
+  children: (File|Directory|WorkCategory|WorkItem|Page|Picture)[];
   /**
    * Assign input to this argument.
    * @returns Directory
    */
-  deserialize(input: any, path = '') {
+  deserialize(input: any, parent = null) {
     Object.assign(this, {
       relativePath: Object.keys(input)[0],
       children: Object.values(input)[0]
@@ -36,15 +37,9 @@ export class Directory implements Deserializable  {
   /**
    * Merge existing title into human readabible slug.
    * @returns string
-   * @copyright https://gist.github.com/mathewbyrne/1280286
    */
   mergeSlug(): string {
-    return this.title.toString().toLowerCase()
-      .replace(/\s+/g, '-')           // Replace spaces with -
-      .replace(/[^\w\-]+/g, '')       // Remove all non-word chars
-      .replace(/\-\-+/g, '-')         // Replace multiple - with single -
-      .replace(/^-+/, '')             // Trim - from start of text
-      .replace(/-+$/, '');            // Trim - from end of text
+    return slugify(this.title);
   }
 }
 export interface IDirectory {
@@ -64,11 +59,11 @@ export class Work extends Directory {
    * work directories.
    * @returns Directory
    */
-  deserialize(directories: any) {
+  deserialize(categories: any) {
     this.relativePath = env.workDir;
     this.absolutePath = this.relativePath;
-    this.children = directories.map(directory => {
-      return new WorkCategory().deserialize(directory, this);
+    this.children = categories.map(category => {
+      return new WorkCategory().deserialize(category, this);
     });
     return this;
   }
@@ -79,17 +74,24 @@ export class Work extends Directory {
  * @extends Directory
  */
 export class WorkCategory extends Directory {
+  slug: string;
   /**
    * Assign input to this argument and iterate through
    * work items.
    * @returns Directory
    */
   deserialize(directory: any, parent: any) {
+    // return null;
     Object.assign(this, directory);
     this.title = this.relativePath.toString().toUpperCase();
     this.absolutePath = this.mergePath(parent);
+    this.slug = slugify(this.title);
     this.children =  directory.children.map(item => {
-      return new WorkItem().deserialize(item, this);
+      if (item instanceof Directory) {
+        return new WorkItem().deserialize(item, this);
+      } else {
+        return item;
+      }
     });
     return this;
   }
@@ -131,11 +133,11 @@ export class WorkItem extends Directory {
   }
 
   mergeInformation(parent: any): string[] {
-    return ['information', 'information', 'information'];
+    return [];
   }
 
   mergeSubTitle(parent: any): string {
-    return 'SUBTITLE';
+    return null;
   }
 }
 export interface IWorkItem extends IDirectory {
