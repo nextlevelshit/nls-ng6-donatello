@@ -5,6 +5,7 @@
 /tmp
 /out-tsc
 /src/content/sitemap.json
+/src/assets/work
 
 # dependencies
 /node_modules
