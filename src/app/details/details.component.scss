@@ -36,14 +36,20 @@ $this-footer-height: 5rem;
     bottom: $this-footer-height;
 
     figure {
+      // height: 100%;
+      // margin: 0;
+      display: grid;
       height: 100%;
-      margin: 0;
 
       img {
-        width: auto;
-        height: 100%;
+        // width: auto;
+        // height: 100%;
+        // max-height: 100%;
+        // margin: 0 auto;
+
+        max-width: 100%;
         max-height: 100%;
-        margin: 0 auto;
+        margin: auto;
       }
 
       figcaption {

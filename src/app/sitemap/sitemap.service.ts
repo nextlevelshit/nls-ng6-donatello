@@ -22,7 +22,7 @@ export class SitemapService {
   ) {
   }
 
-  protected detach(raw: any[]): any[] {
+  protected detach(raw: any): any[] {
     const directories = this.detachDirectories(raw);
     const files = this.detachFiles(raw);
     const pages = this.detachPages(files);

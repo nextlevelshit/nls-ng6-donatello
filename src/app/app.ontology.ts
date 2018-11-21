@@ -126,6 +126,8 @@ export class WorkItem extends Directory {
       .filter(child => child instanceof Picture)
       .map(picture => {
         picture.url = picture.mergeUrl(this);
+        picture.thumbnail = picture.url.replace(env.contentUrl, env.assetsUrl);
+        console.log('WorkItem.picture', picture);
         return picture;
       });
 
@@ -215,6 +217,7 @@ export interface IPage extends IFile {
 export class Picture extends File {
   url: string;
   alt: string;
+  thumbnail: string;
   /**
    * Assign input to this argument.
    * @param input Raw data

@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false,
+  assetsUrl: '/assets',
   contentDir: '',
   contentUrl: '/content',
   workUrl: '/content/work/',

@@ -45,12 +45,16 @@ export class WorkComponent implements OnDestroy {
           plain: 'Work',
         },
         {
-          slug: 'sculpture',
-          plain: 'Skulpturen'
+          slug: '01_SCULPTURE',
+          plain: 'Sculpture'
         },
         {
-          slug: 'drawing',
-          plain: 'Zeichnung'
+          slug: '02_DRAWING',
+          plain: 'Drawing'
+        },
+        {
+          slug: '03_WATERCOLOR',
+          plain: 'Watercolor'
         }
       ]
     });

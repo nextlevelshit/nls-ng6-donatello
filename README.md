@@ -15,6 +15,7 @@
 
 - [Install **Node.js** via package manager](//nodejs.org/en/download/package-manager/)
 - [Install **Angular CLI** via npm](//angular.io/guide/quickstart)
+- [Install **GraphicsMagick** on your OS](//gist.github.com/witooh/089eeac4165dfb5ccf3d)
 
 ### Usefull Scripts
 
