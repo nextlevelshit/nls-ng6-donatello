@@ -1,9 +1,6 @@
 ---
-title: VITA - Sarah Esser
+title: ABOUT - Sarah Esser
 description: Ciricilum Vita of Sarah Esser
-keywords:
-  - das ist ein keyword
-  - das ist ein weiterer keyword
 ---
 # Sarah Esser
 
