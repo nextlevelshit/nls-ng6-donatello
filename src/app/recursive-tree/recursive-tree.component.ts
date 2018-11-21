@@ -6,8 +6,6 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./recursive-tree.component.scss']
 })
 export class RecursiveTreeComponent {
-
-  @Input() protected tree;
-  @Input() protected baseHref;
-
+  @Input() public baseHref;
+  @Input() public tree;
 }

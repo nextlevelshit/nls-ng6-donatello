@@ -11,9 +11,8 @@ import { WorkService } from './work.service';
   styleUrls: ['./work.component.scss']
 })
 export class WorkComponent implements OnDestroy {
-
-  protected work: any;
   protected workSubscription: Subscription;
+  public work: any;
 
   constructor(
     private metaService: MetaService,

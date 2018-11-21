@@ -406,17 +406,11 @@
                 "Sarah Esser_WV 2006-008 (8).JPG",
                 "Sarah Esser_WV 2006-008 (9).JPG"
               ]
-            },
-            "WS_SCP_data.csv"
+            }
           ]
         },
         {
           "02_drawing": [
-            {
-              "Drawings_data": [
-                "Drawings_data.csv"
-              ]
-            },
             {
               "Sarah-Esser_WV-DWG_2008-001": [
                 "Sarah-Esser_WV-DWG_2008-001.jpg"
@@ -816,11 +810,6 @@
         },
         {
           "03_watercolor": [
-            {
-              "CLR_data": [
-                "CLR_data.csv"
-              ]
-            },
             {
               "Sarah-Esser_WV-CLR_2010-001": [
                 "Sarah-Esser_WV-CLR_2010-001.jpg"

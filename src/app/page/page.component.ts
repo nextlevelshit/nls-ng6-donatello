@@ -14,13 +14,13 @@ import { MarkdownService } from './../markdown/markdown.service';
 })
 export class PageComponent implements OnDestroy {
   protected params: any;
-  protected content: any;
   protected slug: string;
   protected urlSubscription: Subscription;
   protected fileSubscription: Subscription;
   protected metadata: any;
   protected headlines: any;
-  protected notFound: boolean | null;
+  public notFound: boolean | null;
+  public content: any;
 
   constructor(
     private route: ActivatedRoute,
