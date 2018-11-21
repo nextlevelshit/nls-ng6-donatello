@@ -4,7 +4,8 @@
 /dist
 /tmp
 /out-tsc
-/src/app/_content/sitemap.json
+/src/content/sitemap.json
+/src/assets/work
 
 # dependencies
 /node_modules

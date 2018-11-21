@@ -19,7 +19,7 @@ export class DetailsComponent implements OnInit, OnDestroy {
   protected urlSubscription: Subscription;
   protected url: UrlSegment[];
   protected work: IDirectory[];
-  protected item: IWorkItem;
+  public item: IWorkItem;
   public currentPicture: any | null;
   public currentIndex: number;
 
@@ -34,12 +34,6 @@ export class DetailsComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     document.body.classList.add(OVERLAY_CLASS);
-
-    // if (!this.findItem()) {
-    //   return this.close();
-    // } else {
-      // this.defineCurrentPicture(1);
-    // }
   }
 
   ngOnDestroy() {
@@ -57,16 +51,7 @@ export class DetailsComponent implements OnInit, OnDestroy {
       });
   }
 
-  // protected findItem() {
-  //   this.item = this.work.find((item: IWorkItem) => {
-  //     return item.fullPath === this.url.join('/');
-  //   });
-
-  //   return this.item;
-  // }
-
   protected defineCurrentPicture(index: number) {
-    // console.log('DetailsComponent.defineCurrentPicture()', this.item);
     const picturesLength = this.item.children.length;
 
     if (index > picturesLength) {
