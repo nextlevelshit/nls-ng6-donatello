@@ -1,9 +1,9 @@
-import { Directive, Input, ElementRef, OnInit, Renderer2 } from '@angular/core';
+import { Directive, Input, ElementRef, Renderer2, OnChanges } from '@angular/core';
 
 @Directive({
   selector: '[nlsResponsiveImg]'
 })
-export class ResponsiveImgDirective implements OnInit {
+export class ResponsiveImgDirective implements OnChanges {
 
   element: HTMLImageElement;
   @Input('nlsResponsiveImg') nlsResponsiveImg: any;
@@ -15,7 +15,7 @@ export class ResponsiveImgDirective implements OnInit {
     this.element = el.nativeElement;
   }
 
-  ngOnInit() {
+  ngOnChanges() {
     this.renderer.setAttribute(this.element, 'srcset', this.srcset);
   }
 
