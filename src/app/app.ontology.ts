@@ -86,12 +86,15 @@ export class WorkCategory extends Directory {
     this.title = this.relativePath.toString().toUpperCase();
     this.absolutePath = this.mergePath(parent);
     this.slug = slugify(this.title);
-    this.children =  directory.children.map(item => {
+    this.children = directory.children.map(item => {
       if (item instanceof Directory) {
         return new WorkItem().deserialize(item, this);
       } else {
         return item;
       }
+    });
+    this.children.sort((a, b) => {
+      return (a.relativePath < b.relativePath) ? 1 : -1;
     });
     return this;
   }
@@ -127,7 +130,13 @@ export class WorkItem extends Directory {
       .map(picture => {
         picture.url = picture.mergeUrl(this);
         picture.thumbnail = picture.url.replace(env.contentUrl, env.assetsUrl);
-        console.log('WorkItem.picture', picture);
+        picture.srcset = [1800, 1200, 800, 640, 320].map(breakpoint => {
+          return {
+            size: breakpoint,
+            src: picture.thumbnail.replace(/(\.[^\.]+)$/, `@${breakpoint}w$1`)
+          };
+        });
+
         return picture;
       });
 
@@ -218,6 +227,7 @@ export class Picture extends File {
   url: string;
   alt: string;
   thumbnail: string;
+  srcset: string[];
   /**
    * Assign input to this argument.
    * @param input Raw data

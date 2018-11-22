@@ -12,20 +12,22 @@
         {{category.title}}
       </h2>
     </header>
-    <div class="card-columns" *ngIf="category.children">
-      <a class="card mb-4" [routerLink]="[{outlets: {details: item.absolutePath}}]" *ngFor="let item of category.children">
-        <figure class="mb-0">
-          <img class="card-img-top" *ngIf="item.children.length" [src]="item.children[0].thumbnail" [alt]="category.title">
-          <!-- <figcaption class="card-body">
-            <h5 class="card-title">{{item.title}}</h5>
-            <ul class="card-text list-inline mb-0" *ngIf="item.information">
-              <li class="list-inline-item" *ngFor="let information of item.information">
-                <small class="text-muted">{{information}}</small>
-              </li>
-            </ul>
-          </figcaption> -->
-        </figure>
-      </a>
+    <div class="row" *ngIf="category.children">
+      <ng-container *ngFor="let item of category.children">
+        <a class="card col-12 col-sm-2 col-md-3 mb-4 pr-0" [routerLink]="[{outlets: {details: item.absolutePath}}]" *ngIf="item">
+          <figure class="mb-0" *ngIf="item.children[0]">
+            <img [nlsResponsiveImg]="item.children[0].srcset" class="card-img-top" *ngIf="item.children.length" [alt]="category.title" [src]="item.children[0].thumbnail">
+            <!-- <figcaption class="card-body">
+              <h5 class="card-title">{{item.title}}</h5>
+              <ul class="card-text list-inline mb-0" *ngIf="item.information">
+                <li class="list-inline-item" *ngFor="let information of item.information">
+                  <small class="text-muted">{{information}}</small>
+                </li>
+              </ul>
+            </figcaption> -->
+          </figure>
+        </a>
+      </ng-container>
     </div>
   </article>
 

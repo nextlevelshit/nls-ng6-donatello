@@ -10,6 +10,7 @@ import { WorkComponent } from './work/work.component';
 import { DetailsComponent } from './details/details.component';
 import { RecursiveTreeComponent } from './recursive-tree/recursive-tree.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { ResponsiveImgDirective } from './responsive-img/responsive-img.directive';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     WorkComponent,
     DetailsComponent,
     RecursiveTreeComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    ResponsiveImgDirective
   ],
   imports: [
     BrowserModule,
