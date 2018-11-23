@@ -40,7 +40,10 @@ gulp.task('mozjpeg', () =>
 gulp.task('thumbnails', () =>
   breakpoints.forEach(breakpoint => {
     gulp.src(src)
-    .pipe(imageResize({width: breakpoint}))
+    .pipe(imageResize({
+			width: breakpoint,
+			imageMagick: true
+		}))
     .on('end', () => log('Finished Resizing for breakpoint', breakpoint))
     .pipe(rename({suffix: `@${breakpoint}w`}))
     .on('end', () => log('Finished Renaming for breakpoint', breakpoint))
