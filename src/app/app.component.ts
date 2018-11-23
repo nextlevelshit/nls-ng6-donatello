@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit, OnDestroy, AfterContentChecked } from '@angular/core';
 import { Meta as DocumentIMeta, Title as DocumentTitle } from '@angular/platform-browser';
 import { Observable, Subscription } from 'rxjs';
@@ -19,13 +20,16 @@ export class AppComponent implements AfterContentChecked, OnDestroy {
   constructor (
     private metaService: MetaService,
     private docTitle: DocumentTitle,
-    private docIMeta: DocumentIMeta
+    private docIMeta: DocumentIMeta,
+    private router: Router
   ) {
   }
 
   ngAfterContentChecked() {
     this.retrieveIMeta();
-    this.currentUrl = window.location.origin + window.location.pathname;
+    // this.currentUrl = window.location.href.replace(/#(\w|\-)*$/i, '');
+    // this.currentUrl = window.location.href.replace(window.location.host, '');
+    this.currentUrl = this.router.url.replace(/#(\w|\-)*$/i, '');
   }
 
   ngOnDestroy() {

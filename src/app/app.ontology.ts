@@ -85,7 +85,7 @@ export class WorkCategory extends Directory {
     Object.assign(this, directory);
     this.title = this.relativePath.toString().toUpperCase();
     this.absolutePath = this.mergePath(parent);
-    this.slug = slugify(this.title);
+    this.slug = slugify(this.title).toLowerCase().replace(/\d*\_/i, '');
     this.children = directory.children.map(item => {
       if (item instanceof Directory) {
         return new WorkItem().deserialize(item, this);
