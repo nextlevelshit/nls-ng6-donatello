@@ -31,7 +31,9 @@ lives and works in Berlin, Germany
   - École nationale supérieure des Arts Décoratifs, Paris, FR 
 
 
-### SOLO EXHIBITIONS (Selection)
+### SOLO EXHIBITIONS
+
+<small>*Selection (for full list, please [contact](/page/contact))*</small>
 
 - 02.12.2016&nbsp;–<br>
   28.01.2017 
@@ -61,7 +63,9 @@ lives and works in Berlin, Germany
   04.02.2007 
   - „Sarah Esser - Gustav-Weidanz-Preis 2006“, Preisträgerausstellung Stiftung Moritzburg, KUNSTMUSEUM DES LANDES SACHSEN-ANHALT, Halle, DE 
 
-### GROUP EHIBITIONS (Selection)
+### GROUP EHIBITIONS
+
+<small>*Selection (for full list, please [contact](/page/contact))*</small>
 
 - 08.09.2017&nbsp;–<br>23.09.2017
   - „Into the Blue“ Skulpturensammlung Stadt Bernau, DE
@@ -161,7 +165,9 @@ lives and works in Berlin, Germany
   - DAAD grant, DE / IT 
 
 
-### COLLECTIONS (Selection)
+### COLLECTIONS
+
+<small>*Selection (for full list, please [contact](/page/contact))*</small>
 
 - Collection Fondation Dufraine, Institut de France, Ile de France, FR
 - Collection C.P.R. Thomas, LU
@@ -172,7 +178,9 @@ lives and works in Berlin, Germany
 - Collection P. Weckesser, Potsdam, DE
 - Collection City of Biesenthal, DE
 		
-### PUBLICATIONS (Selection)
+### PUBLICATIONS
+
+<small>*Selection (for full list, please [contact](/page/contact))*</small>
 
 - 2013
   - „The Land where I love you“, catalogue
@@ -198,7 +206,7 @@ lives and works in Berlin, Germany
   - Cosa mostra? / Katalog zur Ausstellung / Accademia di Belle Arti Bologna, IT 
   - Pub.: Accademia di Belle Arti di Bologna / Officio Erasmus
 
-### TEXT
+### Writings
 
 
 **Claude Abeille, Paris, Mai 2015**

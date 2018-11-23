@@ -54,12 +54,20 @@ export class MarkdownService {
     });
 
     return headlinesRaw.map((headline, i, map) => {
-      const plain = headline.replace(/[#]+/g, '').trim();
+      const plain = this.plainify(headline);
       return {
         plain: plain,
-        slug: slugify(plain, {lower: true})
+        slug: this.slugify(headline)
       };
     });
+  }
+
+  protected plainify(content: string): string {
+    return content.replace(/[#]+/g, '').trim();
+  }
+
+  protected slugify(content: string): string {
+    return slugify(this.plainify(content), {lower: true});
   }
 
 }

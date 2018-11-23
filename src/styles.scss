@@ -78,6 +78,11 @@ article {
       color: $gray-600;
       font-weight: $font-weight-bold;
 
+      &:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+
       > ul {
         margin-left: $spacer;
         list-style-type: none;
