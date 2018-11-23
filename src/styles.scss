@@ -61,6 +61,11 @@ h6 {
 
 article {
 
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
   ul {
     padding-left: 0;
     list-style-type: none;

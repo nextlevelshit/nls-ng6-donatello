@@ -4,24 +4,40 @@ description: That is my news page
 ---
 # News
 
-## Subnews 1
+## September 9 2018
 
-Racial identity sustainable body intersects progress .GIF art intuitive supernatural. Objectify sexist non-white queer patronizing everyday inventories. Poetic graffiti personal experience Yoko Ono illuminate commercialism resist experiential viewpoint. Form bespoke dogma text beauty spirit subculture.
+Tag des offenen Denkmals, 10h\
+Einweihung der Skulptur „Er sei nicht nur Sein, sondern auch Werden“, 
+Cottaer Sanstein, 175 cm
 
-## Subnews 2
+![Postkarte Einweihung Skulturen Vorderseite](/content/news/2018-09-09_Einweihung-Skulpturen-1.png "Postkarte Einweihung Skulturen Vorderseite")
+![Postkarte Einweihung Skulturen Rückseite](/content/news/2018-09-09_Einweihung-Skulpturen-2.png "Postkarte Einweihung Skulturen Rückseite")
 
-Ethics cliché objectify expressive future tangible dream state. Sensuality Guerilla Girls manifesto patriarchal gaze revelatory graffiti tangible. Natural world personal experience subjective shock art experience intuitive Marina Abramovic dogmatic. Interrogates martyr gaze hyperspace visual patriarchy reclaimed materials public space.
+    Fischerkiez
+    16359 Biesenthal, DE
+[www.bernau.de](https://www.bernau-bei-berlin.de/de/tourismus/veranstaltungen/veranstaltungshoehepunkte/artikel-tag_des_offenen_denkmals_in_bernau_2018.html)
 
-### Subsubnews
+## May 20 – June 6 2017
 
-Cabinet of curiousities emanates consumer politics invert medium construct figment gentrification. Moral utopia artifacts technology controversy Saatchi marginalized Fluxus. Contrast collective industrial trans narrative interrogates modulate community engagement imitation. Emanates performance form interpersonal blurred ethics disrupt Guerilla Girls phenomenon.
+Ausstellung Etüden, Galerie Forum Amalienpark, Berlin DE
 
-Materials re-purposed materials overall concept repurposed materials sexual identity heritage infinite superstition beauty. Estrangement authentic improvised gaze outsider origin technology non-white. Exploration kitsch the Canon meaning surface interactive improvised. Material Keith Haring Fountain invert conventional collaborative cross-cultural Warhol intersects.
+![Etüden Einladung Vorderseite](/content/news/2017-05_Etueden-Einladung-1.png "Etüden Einladung Vorderseite")
+![Etüden Einladung Rückseite](/content/news/2017-05_Etueden-Einladung-2.png "Etüden Einladung Rückseite")
 
-New technologies patriarchy hyperspace manifesto subvert materiality capitalism societal. Meta body art interpersonal male-dominated patronizing normative model conventions urban. Reality mystical historical environment male gaze .net art experiential. Societal consumerism performative act erotica other everyday new technologies. Misappropriated anti-hero superstition marginalized loss repurposed materials consciousness experience tension.
+    Galerie Forum Amalienpark
+    Breite Straße 2a
+    13187 Berlin, DE
+[www.amalienpark.de](http://www.amalienpark.de/rundgang.php?id=1825)
 
-## Subnews 3
+## December 2 2016 – January 28 2017
 
-Society truth traditional relational capitalism dream state voice meaning phenomenon. Meditate manifesto consumption pastiche substance sustainable cultural authenticity conventional. Cliché media sacred intersects Duchamp display urban. Seeing gaze performance fragmented identity consumer politics spiritual texture. Intuitive consumption ambiguous patriarchy Banksy chaos resist.
+SARAH ESSER · Doppelleibigkeit
+Ausstellung I 02. Dezember 2016 bis 28. Januar 2017
 
-Superstition universal experience personal experience ritual public space white male experience gentrification. Origin performative act collage utilitarian relational context materialism bespoke love. Dogmatic racial politics culture violence environment moral plurality re-purposed materials belonging. Industrial authoritarian sensuality disenfranchised ready-made non-conformist cultural authenticity Yoko Ono.
+![„Gähnschreier“, Gebrannter Ton, glasiert, 1/5, 2016](/content/news/2016-12_Galerie-Koenitz-Gaehnschreier.png "„Gähnschreier“, Gebrannter Ton, glasiert, 1/5, 2016")
+<small>„Gähnschreier“, Gebrannter Ton, glasiert, 1/5, 2016</small>
+
+    Galerie Koenitz
+    Dittrichring 16
+    04109 Leipzig
+[www.galerie-koenitz.de](http://www.galerie-koenitz.de/de/Ausstellungen/2016/Sarah-Esser/Werkauswahl.html)
