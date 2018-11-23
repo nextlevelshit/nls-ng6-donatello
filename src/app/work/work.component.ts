@@ -26,18 +26,7 @@ export class WorkComponent implements OnDestroy {
 
   protected updateMeta(): void {
     this.metaService.update({
-      title: 'Work Titel',
-      description: 'Work Beschreibung',
-      keywords: [
-        'sarah esser',
-        'sarah esser bildhauer',
-        'sarah esser bildhauerin',
-        'skulpturen',
-        'skulpturen berlin',
-        'sculptures berlin',
-        'bildhauerin berlin',
-        'art berlin sculpture'
-      ],
+      title: 'SARAH ESSER - Work',
       headlines: [
         {
           slug: 'work',

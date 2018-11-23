@@ -1,6 +1,5 @@
 ---
-title: CONTACT - Sarah Essers
-description: That is a description
+title: SARAH ESSER - Contact
 ---
 
 # Contact

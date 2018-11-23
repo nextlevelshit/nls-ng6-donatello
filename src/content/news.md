@@ -1,6 +1,5 @@
 ---
-title: News of Sarah Esser
-description: That is my news page
+title: SARAH ESSER - News
 ---
 # News
 

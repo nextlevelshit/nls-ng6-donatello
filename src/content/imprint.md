@@ -1,5 +1,5 @@
 ---
-title: Imprint - SARAH ESSER
+title: SARAH ESSER - Imprint
 ---
 # Imprint
 

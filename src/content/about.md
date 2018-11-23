@@ -1,6 +1,5 @@
 ---
-title: ABOUT - SARAH ESSER
-description: Ciricilum Vita of Sarah Esser
+title: SARAH ESSER - About
 ---
 # About
 
