@@ -26,7 +26,7 @@ import { ResponsiveImgDirective } from './responsive-img/responsive-img.directiv
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    MarkdownModule.forRoot(),
+    MarkdownModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
