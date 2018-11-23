@@ -11,22 +11,22 @@ lives and works in Berlin, Germany
 
 ### Education
 
-- 2005-06
-  - „Meisterschülerin“ Visual Culture Studies, Sculpture\
+- 2005&nbsp;–<br>2006
+  - „Meisterschülerin“ Visual Culture Studies, Sculpture
   - Prof. Berndt Wilde, Kunsthochschule Berlin, DE
-- 2004-05	
+- 2004&nbsp;–<br>2005	
   - Bronze workshop / Kunsthochschule Berlin, DE
-- 2004-05
+- 2004&nbsp;–<br>2005
   - „Diplom Freie Kunst / Bildhauerei“, Kunsthochschule Berlin, DE
-- 2002-03
+- 2002&nbsp;–<br>2003
   - Erasmus-Program / DAAD, Sculpture, Drawing, Etching
   - Accademia di Belle Arti Bologna, IT 
-- 1999-05
+- 1999&nbsp;–<br>2005
   - Fine Arts / Sculpture, Kunsthochschule Berlin, DE
-- 1998-99
+- 1998&nbsp;–<br>1999
   - Art and space / sculpture / Prof. Arlette Ginioux
   - École nationale supérieure des Arts Décoratifs, Paris, FR 
-- 1997-98 
+- 1997&nbsp;–<br>1998 
   - Art and Space, Drawing / Prof. Charles Auffret
   - École nationale supérieure des Arts Décoratifs, Paris, FR 
 
@@ -175,22 +175,22 @@ lives and works in Berlin, Germany
 ### PUBLICATIONS (Selection)
 
 - 2013
-  - "The Land where I love you", catalogue
+  - „The Land where I love you“, catalogue
   - Kunsthandel Dr. Wilfried Karger, Berlin 29.Mai – 29 Juni 2013 
   - und Galerie Sculptur Bamberg 3. Juli - 3. August 2013
   - Publisher: Kunsthandel Dr. Wilfried Karger, Berlin, DE und Galerie Sculptur, Bamberg, DE
   - Text Annette Pas
-  - "Paris portraits of artists from all around the world“ Photography by Tibor Huzar in collaboration with Simone F. Bruneau, Paris, Frankreich 2012
+  - „Paris portraits of artists from all around the world“ Photography by Tibor Huzar in collaboration with Simone F. Bruneau, Paris, Frankreich 2012
 - 2011
   - „Palmarès des prix et concours“„Académie des Beaux-Arts Institut 2011 – No 13“, ISSN 0768-2050, Hrsg.: Académie des Beaux-Arts, FR
 - 2012
-  - "OPEN STUDIOS  /  10.05.12  /  CITE INTERNATIONALE DES ARTS  /  PARIS «
+  - „OPEN STUDIOS  /  10.05.12  /  CITE INTERNATIONALE DES ARTS  /  PARIS“
   - Film von Eldad & Shosh Lidor, Mai 2012, Paris (FR)
 - 2010
-  - Filmdocumentary Young female sculptors“, Kultur 21, 
+  - „Filmdocumentary Young female sculptors“, Kultur 21, 
   - Deutsche Welle International | Mai 2010, Regie Aygül Cizmecioglu 
 - 2008
-  - "SARAH ESSER  /  Zeichnung. Relief. Plastik.« Catalogue of the Exhibition
+  - „SARAH ESSER  /  Zeichnung. Relief. Plastik.“ Catalogue of the Exhibition
   - Galerie am Gendarmenmarkt, vom january 25th- march 9th 2008
   - Pub.: Galerie am Gendarmenmarkt. Berlin 
   - Text by Berndt Wilde „Palmarès des prix et concours“, Académie des Beaux-Arts, Institut de France
@@ -203,7 +203,7 @@ lives and works in Berlin, Germany
 
 **Claude Abeille, Paris, Mai 2015**
 
-*“A propos de Sarah Esser“*
+*„A propos de Sarah Esser“*
 
 J'ai rencontré Sarah Esser il y a quelques années à Paris et j'ai eu l'occasion de la revoir à Berlin lors de différentes expositions. Depuis, à Paris, je suis son travail avec le plus grand intérêt. Dès le premier regard posé sur ses sculptures j'avais vu que c'était l'œuvre d'un vrai sculpteur.
 Ce n'est pas par le choix des thèmes qu'elle affectionne ,qui sont ceux de la sculpture de toujours, que mon attention avait été attirée, mais parce que, justement, sa démarche se situait au delâ du choix d' un sujet à traiter, au delà même du choix d'un matériau, la terre ou le plàtre étant finalement les plus commodes, les plus appropriés, pour la recherche du volume.
@@ -226,7 +226,7 @@ Académie des Beaux-Arts de l'Institut-de-France.*
 
 ---
 
-**„ Sarah Esser - Skulptur und Zeichnung“, Galerie Kontrapost, Leipzig, DE**
+**„Sarah Esser - Skulptur und Zeichnung“, Galerie Kontrapost, Leipzig, DE**
 
 Allein das Menschliche zählt". Dieser Satz der französischen Bildhauerin Germaine Richier könnte die Ausstellung Sarah Essers - vielleicht auch ihr gesamtes bisheriges Werk - überschreiben: Es geht ausschließlich um den Menschen, um seine äußere und seine innere Position.
 Das Erste, das ich von Sarah Esser sah, war "Tobias": ein junger Mann, sitzend auf zwei undefinierbaren Stützen, so dass seine eigenen Beine den vermeintlichen Hocker erst zu einem vollständigen Sitzmöbel komplettieren. Der Kopf im Profil nach links gerichtet, die Bewegung unterstrichen durch die Arme, die leicht angewinkelt auf den Oberschenkeln ruhen.
@@ -270,7 +270,7 @@ Berlin, den 14.02.2008*
 
 --- 
 
-**„ Sarah Esser - Gustav-Weidanz-Preis 2006“,Preisträgerausstellung Stiftung Moritzburg, KUNSTMUSEUM DES LANDES SACHSEN-ANHALT, Halle, DE**
+**„Sarah Esser - Gustav-Weidanz-Preis 2006“,Preisträgerausstellung Stiftung Moritzburg, KUNSTMUSEUM DES LANDES SACHSEN-ANHALT, Halle, DE**
 
 *Gustav Weidanz Preis - Laudatio*\
 

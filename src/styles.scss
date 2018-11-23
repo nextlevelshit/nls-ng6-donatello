@@ -1,6 +1,5 @@
 // Variables
 @import "styles-variables";
-
 // Bootstrap Reboot
 @import "~bootstrap/scss/reboot";
 @import "~bootstrap/scss/bootstrap-grid";
@@ -16,10 +15,8 @@
 @import "~bootstrap/scss/root";
 @import "~bootstrap/scss/type";
 @import "~bootstrap/scss/utilities";
-
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500|Roboto:300,400,400i,500');
-
 // Base
 html {
   position: relative;
@@ -29,7 +26,6 @@ html {
 body {
   margin-top: $nls-navbar-height;
   margin-bottom: $nls-footer-height;
-
   &.nls-overlay {
     overflow: hidden;
   }
@@ -37,13 +33,17 @@ body {
 
 a {
   transition: ease $nls-transition-duration;
-
   &:hover {
     text-decoration: none;
   }
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   &:target {
     display: block;
     color: $red;
@@ -51,7 +51,11 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-h2, h3, h4, h5, h6 {
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-top: $spacer * 2;
 }
 
@@ -61,41 +65,48 @@ article {
     padding-left: 0;
     list-style-type: none;
 
-    li {
-      display: flex;
-      margin-bottom: .8 * $spacer;
-      margin-right: $spacer;
+    > li {
+      $this-bottom-spacer: .8 * $spacer;
 
-      ul {
+      display: flex;
+      margin-right: $spacer;
+      padding-bottom: $this-bottom-spacer;
+      margin-bottom: $this-bottom-spacer;
+      border-bottom: 1px solid $hr-border-color;
+
+      font-size: $font-size-sm;
+      color: $gray-600;
+      font-weight: $font-weight-bold;
+
+      > ul {
         margin-left: $spacer;
         list-style-type: none;
-        // margin-left: $spacer * 5;
-        // margin-top: - $line-height-base * $font-size-base;
 
-        li {
+        > li {
           margin: 0;
+          padding: 0;
+          border: 0;
+          font-size: $font-size-base;
+          color: $body-color;
+          font-weight: $font-weight-base;
         }
       }
     }
   }
+
 }
 
 // Components
-
 .nls {
-
   &-sidebar {
     position: sticky;
     top: $nls-navbar-height;
-
     &-list {
       padding: 0;
-
       &-item {
         list-style-type: none;
         margin: 0;
         padding: .5 * $spacer 0;
-
         a {
           display: block;
           font-size: $font-size-sm;
@@ -107,7 +118,6 @@ article {
       }
     }
   }
-
   &-footer {
     position: absolute;
     bottom: 0;

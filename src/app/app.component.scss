@@ -62,7 +62,8 @@
       }
 
       @include media-breakpoint-down(sm) {
-        font-size: 80%;
+        font-size: 70%;
+        padding: 0 .2 * $spacer;
       }
 
       &:hover,
