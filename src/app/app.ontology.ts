@@ -44,9 +44,9 @@ export class Directory implements Deserializable  {
 }
 export interface IDirectory {
   relativePath: string;
+  children: (IFile|IDirectory|IWorkCategory|IWorkItem|IPage|IPicture)[];
   absolutePath?: string;
   title?: string;
-  children?: (IFile|IDirectory|IWorkCategory|IWorkItem|IPage|IPicture)[];
 }
 
 /**

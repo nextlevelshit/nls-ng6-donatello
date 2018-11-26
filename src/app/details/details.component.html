@@ -6,7 +6,7 @@
         <img [nlsResponsiveImg]="currentPicture.srcset" [src]="currentPicture.url" [alt]="currentPicture.alt">
       </figure>
       <div class="nls-details-action d-flex justify-content-between align-items-stretch"
-        (press)="defineCurrentPicture(currentIndex + 1)"
+        (click)="defineCurrentPicture(currentIndex + 1)"
         (swiperight)="defineCurrentPicture(currentIndex - 1)"
         (swipeleft)="defineCurrentPicture(currentIndex + 1)">
       </div>

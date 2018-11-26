@@ -24,7 +24,7 @@ export class WorkService {
   ) {
   }
 
-  public subscribeWork(): Observable<IDirectory[]> {
+  public subscribeWork(): Observable<IDirectory> {
     return this.sitemapService.work().pipe(
       map(work => work)
     );
