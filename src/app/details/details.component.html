@@ -5,7 +5,10 @@
       <figure class="d-flex flex-column justify-content-between align-items-stretch" *ngIf="currentPicture">
         <img [nlsResponsiveImg]="currentPicture.srcset" [src]="currentPicture.url" [alt]="currentPicture.alt">
       </figure>
-      <div class="nls-details-action d-flex justify-content-between align-items-stretch" (click)="defineCurrentPicture(currentIndex + 1)">
+      <div class="nls-details-action d-flex justify-content-between align-items-stretch"
+        (press)="defineCurrentPicture(currentIndex + 1)"
+        (swiperight)="defineCurrentPicture(currentIndex + 1)"
+        (swipeleft)="defineCurrentPicture(currentIndex - 1)">
       </div>
     </main>
     <footer>
