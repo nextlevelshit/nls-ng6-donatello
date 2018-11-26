@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false,
+  baseHref: 'http://localhost:4200/',
   assetsUrl: '/assets',
   contentDir: '',
   contentUrl: '/content',

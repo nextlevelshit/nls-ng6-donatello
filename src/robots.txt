@@ -1,8 +1,2 @@
 User-agent: *
 Allow: /
-Disallow: /work
-Disallow: /page
-Disallow: /#/page/contact/details
-Disallow: /#/page/impressum/details
-Disallow: /#/page/imrpint/details
-Disallow: /#/page/about/details

@@ -1,3 +1,4 @@
+import { SitemapComponent } from './sitemap/sitemap.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -19,6 +20,10 @@ const routes: Routes = [
   {
     path: 'page/:slug',
     component: PageComponent
+  },
+  {
+    path: 'sitemap',
+    component: SitemapComponent
   },
   {
     path: '',
