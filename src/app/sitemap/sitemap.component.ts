@@ -3,6 +3,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Observable, Subscription } from 'rxjs';
 
 import { environment as env } from './../../environments/environment';
+import { WorkCategory, WorkItem } from './../app.ontology';
 
 @Component({
   selector: 'nls-sitemap',
@@ -34,9 +35,13 @@ export class SitemapComponent implements OnInit, OnDestroy {
 
     this.workSubscription = this.workService.subscribeWork().subscribe(res => {
       res.children.forEach(category => {
-        category.children.forEach(item => {
-          this.urls.push(this.parseXml(`(details:${item.absolutePath})`));
-        });
+        if (category instanceof WorkCategory) {
+          category.children.forEach(item => {
+            if (item instanceof WorkItem) {
+              this.urls.push(this.parseXml(`(details:${item.absolutePath})`));
+            }
+          });
+        }
       });
 
       this.sitemap = this.urls.join('\n\t');
