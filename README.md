@@ -14,7 +14,7 @@
 ### Rquirements
 
 - [Install **Node.js** via package manager](//nodejs.org/en/download/package-manager/)
-- [Install **Angular CLI** via npm](//angular.io/guide/quickstart)
+- [Install **Angular** via npm](//angular.io/guide/quickstart)
 
 ### Usefull Scripts
 
