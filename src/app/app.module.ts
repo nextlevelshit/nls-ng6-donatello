@@ -1,8 +1,10 @@
+import { NgtUniversalModule } from '@ng-toolkit/universal';
+import { TransferHttpCacheModule } from '@nguniversal/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { MarkdownModule, MarkedOptions } from 'ngx-markdown';
-import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { HashLocationStrategy, LocationStrategy , CommonModule} from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -25,8 +27,14 @@ import { SitemapComponent } from './sitemap/sitemap.component';
     ResponsiveImgDirective,
     SitemapComponent
   ],
-  imports: [
-    BrowserModule,
+  imports:[
+ CommonModule,
+NgtUniversalModule,
+ 
+ TransferHttpCacheModule,
+HttpClientModule,
+ 
+    
     AppRoutingModule,
     HttpClientModule,
     MarkdownModule.forRoot()
@@ -34,6 +42,5 @@ import { SitemapComponent } from './sitemap/sitemap.component';
   providers: [
     { provide: LocationStrategy, useClass: HashLocationStrategy }
   ],
-  bootstrap: [AppComponent]
 })
 export class AppModule { }

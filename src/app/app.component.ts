@@ -1,5 +1,6 @@
+import { WINDOW } from '@ng-toolkit/universal';
 import { Router } from '@angular/router';
-import { Component, OnInit, OnDestroy, AfterContentChecked } from '@angular/core';
+import { Component, OnInit, OnDestroy, AfterContentChecked , Inject } from '@angular/core';
 import { Meta as DocumentIMeta, Title as DocumentTitle } from '@angular/platform-browser';
 import { Observable, Subscription } from 'rxjs';
 
